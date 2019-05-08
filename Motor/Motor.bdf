@@ -565,10 +565,6 @@ applicable agreement for further details.
 	(pt 88 440)
 )
 (connector
-	(pt 40 136)
-	(pt 48 136)
-)
-(connector
 	(pt 48 136)
 	(pt 88 136)
 )
@@ -577,24 +573,12 @@ applicable agreement for further details.
 	(pt 128 136)
 )
 (connector
-	(pt 40 104)
-	(pt 48 104)
-)
-(connector
 	(pt 48 104)
 	(pt 88 104)
 )
 (connector
-	(pt 40 160)
-	(pt 48 160)
-)
-(connector
 	(pt 48 160)
 	(pt 112 160)
-)
-(connector
-	(pt 40 192)
-	(pt 48 192)
 )
 (connector
 	(pt 48 192)
@@ -611,10 +595,6 @@ applicable agreement for further details.
 (connector
 	(pt 376 352)
 	(pt 376 320)
-)
-(connector
-	(pt 384 288)
-	(pt 448 288)
 )
 (connector
 	(pt 448 288)
@@ -674,7 +654,3 @@ applicable agreement for further details.
 (junction (pt 88 136))
 (junction (pt 320 168))
 (junction (pt 88 416))
-(junction (pt 48 136))
-(junction (pt 48 104))
-(junction (pt 48 160))
-(junction (pt 48 192))
