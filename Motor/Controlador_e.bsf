@@ -26,8 +26,8 @@ applicable agreement for further details.
 	(port
 		(pt 0 32)
 		(input)
-		(text "en" (rect 0 0 9 12)(font "Arial" ))
-		(text "en" (rect 21 27 30 39)(font "Arial" ))
+		(text "en4" (rect 0 0 15 12)(font "Arial" ))
+		(text "en4" (rect 21 27 36 39)(font "Arial" ))
 		(line (pt 0 32)(pt 16 32)(line_width 1))
 	)
 	(port
@@ -75,8 +75,8 @@ applicable agreement for further details.
 	(port
 		(pt 176 80)
 		(output)
-		(text "on_off" (rect 0 0 27 12)(font "Arial" ))
-		(text "on_off" (rect 128 75 155 87)(font "Arial" ))
+		(text "enable" (rect 0 0 24 12)(font "Arial" ))
+		(text "enable" (rect 131 75 155 87)(font "Arial" ))
 		(line (pt 176 80)(pt 160 80)(line_width 1))
 	)
 	(drawing

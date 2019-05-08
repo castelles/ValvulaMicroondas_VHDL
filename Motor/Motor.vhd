@@ -14,7 +14,7 @@
 
 -- PROGRAM		"Quartus II 32-bit"
 -- VERSION		"Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition"
--- CREATED		"Tue May 07 20:54:48 2019"
+-- CREATED		"Tue May 07 21:57:01 2019"
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.all; 
@@ -28,6 +28,8 @@ ENTITY Motor IS
 		enable :  IN  STD_LOGIC;
 		data1 :  IN  STD_LOGIC;
 		data0 :  IN  STD_LOGIC;
+		sp_control :  IN  STD_LOGIC;
+		rt_control :  IN  STD_LOGIC;
 		rt :  OUT  STD_LOGIC;
 		ls :  OUT  STD_LOGIC
 	);
@@ -36,14 +38,14 @@ END Motor;
 ARCHITECTURE bdf_type OF Motor IS 
 
 COMPONENT controlador_e
-	PORT(en : IN STD_LOGIC;
+	PORT(en4 : IN STD_LOGIC;
 		 clk : IN STD_LOGIC;
 		 sp_control : IN STD_LOGIC;
 		 rt_control : IN STD_LOGIC;
 		 sp : OUT STD_LOGIC;
 		 rt : OUT STD_LOGIC;
 		 load_reg : OUT STD_LOGIC;
-		 on_off : OUT STD_LOGIC
+		 enable : OUT STD_LOGIC
 	);
 END COMPONENT;
 
@@ -57,6 +59,7 @@ END COMPONENT;
 
 COMPONENT lpm_counter0
 	PORT(clock : IN STD_LOGIC;
+		 cnt_en : IN STD_LOGIC;
 		 q : OUT STD_LOGIC_VECTOR(18 DOWNTO 0)
 	);
 END COMPONENT;
@@ -77,12 +80,12 @@ COMPONENT lpm_shiftreg0
 	);
 END COMPONENT;
 
-SIGNAL	SYNTHESIZED_WIRE_0 :  STD_LOGIC;
+SIGNAL	SYNTHESIZED_WIRE_7 :  STD_LOGIC;
 SIGNAL	SYNTHESIZED_WIRE_1 :  STD_LOGIC;
 SIGNAL	SYNTHESIZED_WIRE_2 :  STD_LOGIC_VECTOR(18 DOWNTO 0);
-SIGNAL	SYNTHESIZED_WIRE_3 :  STD_LOGIC;
 SIGNAL	SYNTHESIZED_WIRE_4 :  STD_LOGIC;
 SIGNAL	SYNTHESIZED_WIRE_5 :  STD_LOGIC;
+SIGNAL	SYNTHESIZED_WIRE_6 :  STD_LOGIC;
 
 
 BEGIN 
@@ -90,16 +93,18 @@ BEGIN
 
 
 b2v_inst : controlador_e
-PORT MAP(en => enable,
+PORT MAP(en4 => enable,
 		 clk => clk,
-		 sp => SYNTHESIZED_WIRE_3,
+		 sp_control => sp_control,
+		 rt_control => rt_control,
+		 sp => SYNTHESIZED_WIRE_4,
 		 rt => rt,
-		 load_reg => SYNTHESIZED_WIRE_4,
-		 on_off => SYNTHESIZED_WIRE_0);
+		 load_reg => SYNTHESIZED_WIRE_5,
+		 enable => SYNTHESIZED_WIRE_7);
 
 
 b2v_inst2 : comparador_e
-PORT MAP(en => SYNTHESIZED_WIRE_0,
+PORT MAP(en => SYNTHESIZED_WIRE_7,
 		 a => SYNTHESIZED_WIRE_1,
 		 b => SYNTHESIZED_WIRE_2,
 		 ls => ls);
@@ -107,20 +112,21 @@ PORT MAP(en => SYNTHESIZED_WIRE_0,
 
 b2v_inst3 : lpm_counter0
 PORT MAP(clock => clk,
+		 cnt_en => SYNTHESIZED_WIRE_7,
 		 q => SYNTHESIZED_WIRE_2);
 
 
 b2v_inst4 : lpm_mux0
 PORT MAP(data1 => data1,
 		 data0 => data0,
-		 sel => SYNTHESIZED_WIRE_3,
-		 result => SYNTHESIZED_WIRE_5);
+		 sel => SYNTHESIZED_WIRE_4,
+		 result => SYNTHESIZED_WIRE_6);
 
 
 b2v_inst5 : lpm_shiftreg0
-PORT MAP(load => SYNTHESIZED_WIRE_4,
+PORT MAP(load => SYNTHESIZED_WIRE_5,
 		 clock => clk,
-		 data(0) => SYNTHESIZED_WIRE_5,
+		 data(0) => SYNTHESIZED_WIRE_6,
 		 q(0) => SYNTHESIZED_WIRE_1);
 
 

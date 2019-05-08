@@ -43,6 +43,7 @@ ENTITY lpm_counter0 IS
 	PORT
 	(
 		clock		: IN STD_LOGIC ;
+		cnt_en		: IN STD_LOGIC ;
 		q		: OUT STD_LOGIC_VECTOR (18 DOWNTO 0)
 	);
 END lpm_counter0;
@@ -64,6 +65,7 @@ ARCHITECTURE SYN OF lpm_counter0 IS
 	);
 	PORT (
 			clock	: IN STD_LOGIC ;
+			cnt_en	: IN STD_LOGIC ;
 			q	: OUT STD_LOGIC_VECTOR (18 DOWNTO 0)
 	);
 	END COMPONENT;
@@ -81,6 +83,7 @@ BEGIN
 	)
 	PORT MAP (
 		clock => clock,
+		cnt_en => cnt_en,
 		q => sub_wire0
 	);
 
@@ -96,7 +99,7 @@ END SYN;
 -- Retrieval info: PRIVATE: ASET NUMERIC "0"
 -- Retrieval info: PRIVATE: ASET_ALL1 NUMERIC "1"
 -- Retrieval info: PRIVATE: CLK_EN NUMERIC "0"
--- Retrieval info: PRIVATE: CNT_EN NUMERIC "0"
+-- Retrieval info: PRIVATE: CNT_EN NUMERIC "1"
 -- Retrieval info: PRIVATE: CarryIn NUMERIC "0"
 -- Retrieval info: PRIVATE: CarryOut NUMERIC "0"
 -- Retrieval info: PRIVATE: Direction NUMERIC "0"
@@ -117,12 +120,14 @@ END SYN;
 -- Retrieval info: CONSTANT: LPM_TYPE STRING "LPM_COUNTER"
 -- Retrieval info: CONSTANT: LPM_WIDTH NUMERIC "19"
 -- Retrieval info: USED_PORT: clock 0 0 0 0 INPUT NODEFVAL "clock"
+-- Retrieval info: USED_PORT: cnt_en 0 0 0 0 INPUT NODEFVAL "cnt_en"
 -- Retrieval info: USED_PORT: q 0 0 19 0 OUTPUT NODEFVAL "q[18..0]"
 -- Retrieval info: CONNECT: @clock 0 0 0 0 clock 0 0 0 0
+-- Retrieval info: CONNECT: @cnt_en 0 0 0 0 cnt_en 0 0 0 0
 -- Retrieval info: CONNECT: q 0 0 19 0 @q 0 0 19 0
 -- Retrieval info: GEN_FILE: TYPE_NORMAL lpm_counter0.vhd TRUE
 -- Retrieval info: GEN_FILE: TYPE_NORMAL lpm_counter0.inc FALSE
 -- Retrieval info: GEN_FILE: TYPE_NORMAL lpm_counter0.cmp TRUE
--- Retrieval info: GEN_FILE: TYPE_NORMAL lpm_counter0.bsf TRUE FALSE
+-- Retrieval info: GEN_FILE: TYPE_NORMAL lpm_counter0.bsf TRUE
 -- Retrieval info: GEN_FILE: TYPE_NORMAL lpm_counter0_inst.vhd FALSE
 -- Retrieval info: LIB_FILE: lpm
