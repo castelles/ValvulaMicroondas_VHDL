@@ -1,0 +1,13 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity Controlador_e is
+	port(
+			
+		 );
+end Controlador_e;
+
+architecture arq1 of Controlador_e is
+begin
+	;
+end arq1;

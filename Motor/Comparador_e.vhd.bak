@@ -1,0 +1,19 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity Comparador_e is
+	port(
+			en	         : in std_logic_vector;
+			sp_control  : in std_logic_vector;
+			rt_control  : in std_logic_vector;
+			sp 			: out std_logic_vector;
+			rt				: out std_logic_vector;
+			load_reg		: out std_logic_vector;
+			on_off		: out std_logic_vector
+		 );
+end Comparador_e;
+
+architecture arq1 of Comparador_e is
+begin
+	
+end arq1;
