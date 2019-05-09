@@ -1,5 +1,7 @@
 <?xml version="1.0" ?>
 <LOG_ROOT>
 	<PROJECT NAME="Motor">
+		<CBX_INST_ENTRY INSTANCE_NAME="|Motor|lpm_counter0:inst3|lpm_counter:LPM_COUNTER_component" CBX_FILE_NAME="cntr_5uj.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Motor|lpm_mux0:inst4|LPM_MUX:LPM_MUX_component" CBX_FILE_NAME="mux_o7e.tdf"/>
 	</PROJECT>
 </LOG_ROOT>

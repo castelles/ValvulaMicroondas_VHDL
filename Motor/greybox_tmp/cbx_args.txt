@@ -3,5 +3,6 @@ LPM_TYPE=LPM_DECODE
 LPM_WIDTH=1
 DEVICE_FAMILY="Cyclone IV E"
 data
+enable
 eq
 eq
