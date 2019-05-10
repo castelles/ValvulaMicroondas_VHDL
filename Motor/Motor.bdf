@@ -87,7 +87,7 @@ applicable agreement for further details.
 	(input)
 	(rect 104 264 272 280)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "speed_L[6..0]" (rect 5 0 73 12)(font "Arial" ))
+	(text "speed_L[6..0]" (rect 5 0 72 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -103,7 +103,7 @@ applicable agreement for further details.
 	(input)
 	(rect 104 296 272 312)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "speed_H[6..0]" (rect 5 0 75 12)(font "Arial" ))
+	(text "speed_H[6..0]" (rect 5 0 74 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -615,10 +615,6 @@ applicable agreement for further details.
 (connector
 	(pt 48 192)
 	(pt 112 192)
-)
-(connector
-	(pt 344 424)
-	(pt 344 440)
 )
 (connector
 	(pt 496 352)
