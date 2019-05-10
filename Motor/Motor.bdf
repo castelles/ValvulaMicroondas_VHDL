@@ -303,7 +303,7 @@ applicable agreement for further details.
 	)
 )
 (symbol
-	(rect -112 304 8 384)
+	(rect -72 304 48 384)
 	(text "One_delay" (rect 5 0 56 12)(font "Arial" ))
 	(text "inst6" (rect 8 64 31 76)(font "Arial" ))
 	(port
@@ -553,50 +553,6 @@ applicable agreement for further details.
 	(pt 320 224)
 )
 (connector
-	(pt 40 336)
-	(pt 40 472)
-)
-(connector
-	(pt 176 472)
-	(pt 40 472)
-)
-(connector
-	(pt 8 336)
-	(pt 40 336)
-)
-(connector
-	(pt 320 224)
-	(pt -128 224)
-)
-(connector
-	(pt -112 336)
-	(pt -128 336)
-)
-(connector
-	(pt -128 224)
-	(pt -128 336)
-)
-(connector
-	(pt 88 416)
-	(pt -128 416)
-)
-(connector
-	(pt -128 416)
-	(pt -128 352)
-)
-(connector
-	(pt -112 352)
-	(pt -128 352)
-)
-(connector
-	(pt 88 368)
-	(pt 88 416)
-)
-(connector
-	(pt 88 416)
-	(pt 88 440)
-)
-(connector
 	(pt 48 136)
 	(pt 88 136)
 )
@@ -713,6 +669,50 @@ applicable agreement for further details.
 (connector
 	(pt 1128 344)
 	(pt 1128 368)
+)
+(connector
+	(pt 176 472)
+	(pt 64 472)
+)
+(connector
+	(pt 64 472)
+	(pt 64 336)
+)
+(connector
+	(pt 64 336)
+	(pt 48 336)
+)
+(connector
+	(pt 320 224)
+	(pt -88 224)
+)
+(connector
+	(pt -88 224)
+	(pt -88 336)
+)
+(connector
+	(pt -72 336)
+	(pt -88 336)
+)
+(connector
+	(pt 88 416)
+	(pt -88 416)
+)
+(connector
+	(pt -88 416)
+	(pt -88 352)
+)
+(connector
+	(pt -72 352)
+	(pt -88 352)
+)
+(connector
+	(pt 88 368)
+	(pt 88 416)
+)
+(connector
+	(pt 88 416)
+	(pt 88 440)
 )
 (junction (pt 88 368))
 (junction (pt 88 136))
