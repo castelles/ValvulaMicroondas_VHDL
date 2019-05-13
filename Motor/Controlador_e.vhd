@@ -15,12 +15,20 @@ entity Controlador_e is
 end Controlador_e;
 
 architecture arq1 of Controlador_e is
-begin
---	process(clk)
+	TYPE State_type IS (off_controller, high_on, high_off, low_on, low_off);
+	signal state_controller : State_type;
+
+	begin
+
 --	begin
---		if(clock'event and clock='0') then
---			sp <= sp_control;        
---			rt <= rt_control;
---			enable, load_reg <= en4;
---	end process;
+--		process(clk,en4)
+--		begin
+--			if en4 = '0' then
+--				state_controller <= off;
+--			elsif (clk'event and clk = '0') then
+--				case state_controller IS
+--					
+--					when off =>
+--						if sp_control = '1'
+--	
 end arq1;

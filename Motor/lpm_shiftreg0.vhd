@@ -43,16 +43,16 @@ ENTITY lpm_shiftreg0 IS
 	PORT
 	(
 		clock		: IN STD_LOGIC ;
-		data		: IN STD_LOGIC_VECTOR (6 DOWNTO 0);
+		data		: IN STD_LOGIC_VECTOR (7 DOWNTO 0);
 		load		: IN STD_LOGIC ;
-		q		: OUT STD_LOGIC_VECTOR (6 DOWNTO 0)
+		q		: OUT STD_LOGIC_VECTOR (7 DOWNTO 0)
 	);
 END lpm_shiftreg0;
 
 
 ARCHITECTURE SYN OF lpm_shiftreg0 IS
 
-	SIGNAL sub_wire0	: STD_LOGIC_VECTOR (6 DOWNTO 0);
+	SIGNAL sub_wire0	: STD_LOGIC_VECTOR (7 DOWNTO 0);
 
 
 
@@ -64,20 +64,20 @@ ARCHITECTURE SYN OF lpm_shiftreg0 IS
 	);
 	PORT (
 			clock	: IN STD_LOGIC ;
-			data	: IN STD_LOGIC_VECTOR (6 DOWNTO 0);
+			data	: IN STD_LOGIC_VECTOR (7 DOWNTO 0);
 			load	: IN STD_LOGIC ;
-			q	: OUT STD_LOGIC_VECTOR (6 DOWNTO 0)
+			q	: OUT STD_LOGIC_VECTOR (7 DOWNTO 0)
 	);
 	END COMPONENT;
 
 BEGIN
-	q    <= sub_wire0(6 DOWNTO 0);
+	q    <= sub_wire0(7 DOWNTO 0);
 
 	LPM_SHIFTREG_component : LPM_SHIFTREG
 	GENERIC MAP (
 		lpm_direction => "LEFT",
 		lpm_type => "LPM_SHIFTREG",
-		lpm_width => 7
+		lpm_width => 8
 	)
 	PORT MAP (
 		clock => clock,
@@ -109,20 +109,20 @@ END SYN;
 -- Retrieval info: PRIVATE: SYNTH_WRAPPER_GEN_POSTFIX STRING "0"
 -- Retrieval info: PRIVATE: SerialShiftInput NUMERIC "0"
 -- Retrieval info: PRIVATE: SerialShiftOutput NUMERIC "0"
--- Retrieval info: PRIVATE: nBit NUMERIC "7"
+-- Retrieval info: PRIVATE: nBit NUMERIC "8"
 -- Retrieval info: PRIVATE: new_diagram STRING "1"
 -- Retrieval info: LIBRARY: lpm lpm.lpm_components.all
 -- Retrieval info: CONSTANT: LPM_DIRECTION STRING "LEFT"
 -- Retrieval info: CONSTANT: LPM_TYPE STRING "LPM_SHIFTREG"
--- Retrieval info: CONSTANT: LPM_WIDTH NUMERIC "7"
+-- Retrieval info: CONSTANT: LPM_WIDTH NUMERIC "8"
 -- Retrieval info: USED_PORT: clock 0 0 0 0 INPUT NODEFVAL "clock"
--- Retrieval info: USED_PORT: data 0 0 7 0 INPUT NODEFVAL "data[6..0]"
+-- Retrieval info: USED_PORT: data 0 0 8 0 INPUT NODEFVAL "data[7..0]"
 -- Retrieval info: USED_PORT: load 0 0 0 0 INPUT NODEFVAL "load"
--- Retrieval info: USED_PORT: q 0 0 7 0 OUTPUT NODEFVAL "q[6..0]"
+-- Retrieval info: USED_PORT: q 0 0 8 0 OUTPUT NODEFVAL "q[7..0]"
 -- Retrieval info: CONNECT: @clock 0 0 0 0 clock 0 0 0 0
--- Retrieval info: CONNECT: @data 0 0 7 0 data 0 0 7 0
+-- Retrieval info: CONNECT: @data 0 0 8 0 data 0 0 8 0
 -- Retrieval info: CONNECT: @load 0 0 0 0 load 0 0 0 0
--- Retrieval info: CONNECT: q 0 0 7 0 @q 0 0 7 0
+-- Retrieval info: CONNECT: q 0 0 8 0 @q 0 0 8 0
 -- Retrieval info: GEN_FILE: TYPE_NORMAL lpm_shiftreg0.vhd TRUE
 -- Retrieval info: GEN_FILE: TYPE_NORMAL lpm_shiftreg0.inc FALSE
 -- Retrieval info: GEN_FILE: TYPE_NORMAL lpm_shiftreg0.cmp TRUE
