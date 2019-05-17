@@ -38,7 +38,16 @@ in1 <= selectRot.DB_MAX_OUTPUT_PORT_TYPE
 en4 => process_0.IN0
 en4 => process_0.IN0
 en4 => process_0.IN0
-clk => ~NO_FANOUT~
+en4 => state_controller~7.DATAIN
+en4 => en_count~reg0.ENA
+en4 => sp~reg0.ENA
+en4 => rt~reg0.ENA
+en4 => load~reg0.ENA
+clk => en_count~reg0.CLK
+clk => load~reg0.CLK
+clk => rt~reg0.CLK
+clk => sp~reg0.CLK
+clk => state_controller~5.DATAIN
 remote => process_0.IN1
 remote => process_0.IN1
 remote => process_0.IN1
@@ -46,10 +55,10 @@ local => process_0.IN1
 local => process_0.IN1
 local => process_0.IN1
 local => process_0.IN1
-sp <= sp$latch.DB_MAX_OUTPUT_PORT_TYPE
-rt <= rt$latch.DB_MAX_OUTPUT_PORT_TYPE
-load <= load$latch.DB_MAX_OUTPUT_PORT_TYPE
-en_count <= en_count$latch.DB_MAX_OUTPUT_PORT_TYPE
+sp <= sp~reg0.DB_MAX_OUTPUT_PORT_TYPE
+rt <= rt~reg0.DB_MAX_OUTPUT_PORT_TYPE
+load <= load~reg0.DB_MAX_OUTPUT_PORT_TYPE
+en_count <= en_count~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Motor|Comparador_e:inst2
