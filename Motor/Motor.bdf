@@ -87,7 +87,7 @@ applicable agreement for further details.
 	(input)
 	(rect -120 152 48 168)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "key_remote" (rect 5 0 63 12)(font "Arial" ))
+	(text "key_remote" (rect 5 0 62 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -103,7 +103,7 @@ applicable agreement for further details.
 	(input)
 	(rect -120 184 48 200)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "key_local" (rect 5 0 52 12)(font "Arial" ))
+	(text "key_local" (rect 5 0 51 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -149,7 +149,7 @@ applicable agreement for further details.
 )
 (pin
 	(output)
-	(rect 968 336 1144 352)
+	(rect 944 336 1120 352)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "duty_cycle" (rect 90 0 143 12)(font "Arial" ))
 	(pt 0 8)
@@ -341,7 +341,7 @@ applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 776 312 904 424)
+	(rect 768 312 896 424)
 	(text "Comparador_e" (rect 5 0 76 12)(font "Arial" ))
 	(text "inst2" (rect 8 96 31 108)(font "Arial" ))
 	(port
@@ -448,37 +448,33 @@ applicable agreement for further details.
 		(pt 168 32)
 		(output)
 		(text "sp" (rect 0 0 11 12)(font "Arial" ))
-		(text "sp" (rect 138 27 147 39)(font "Arial" ))
+		(text "sp" (rect 138 27 149 39)(font "Arial" ))
 		(line (pt 168 32)(pt 152 32))
 	)
 	(port
 		(pt 168 48)
 		(output)
 		(text "rt" (rect 0 0 7 12)(font "Arial" ))
-		(text "rt" (rect 142 43 147 55)(font "Arial" ))
+		(text "rt" (rect 142 43 149 55)(font "Arial" ))
 		(line (pt 168 48)(pt 152 48))
 	)
 	(port
 		(pt 168 64)
 		(output)
 		(text "load" (rect 0 0 20 12)(font "Arial" ))
-		(text "load" (rect 131 59 147 71)(font "Arial" ))
+		(text "load" (rect 131 59 151 71)(font "Arial" ))
 		(line (pt 168 64)(pt 152 64))
 	)
 	(port
 		(pt 168 80)
 		(output)
 		(text "en_count" (rect 0 0 44 12)(font "Arial" ))
-		(text "en_count" (rect 110 75 147 87)(font "Arial" ))
+		(text "en_count" (rect 110 75 154 87)(font "Arial" ))
 		(line (pt 168 80)(pt 152 80))
 	)
 	(drawing
 		(rectangle (rect 16 16 152 96))
 	)
-)
-(connector
-	(pt 304 152)
-	(pt 528 152)
 )
 (connector
 	(pt 528 152)
@@ -554,10 +550,6 @@ applicable agreement for further details.
 	(pt 544 288)
 	(pt 480 288)
 	(bus)
-)
-(connector
-	(pt 304 120)
-	(pt 504 120)
 )
 (connector
 	(pt 504 120)
@@ -658,48 +650,8 @@ applicable agreement for further details.
 	(pt 64 320)
 )
 (connector
-	(pt 304 168)
-	(pt 320 168)
-)
-(connector
 	(pt 320 168)
 	(pt 752 168)
-)
-(connector
-	(pt 736 376)
-	(pt 776 376)
-	(bus)
-)
-(connector
-	(pt 736 472)
-	(pt 736 376)
-	(bus)
-)
-(connector
-	(pt 736 360)
-	(pt 776 360)
-	(bus)
-)
-(connector
-	(pt 736 304)
-	(pt 736 360)
-	(bus)
-)
-(connector
-	(pt 752 344)
-	(pt 776 344)
-)
-(connector
-	(pt 752 168)
-	(pt 752 344)
-)
-(connector
-	(pt 904 344)
-	(pt 968 344)
-)
-(connector
-	(pt 304 136)
-	(pt 776 136)
 )
 (connector
 	(pt 928 152)
@@ -732,6 +684,54 @@ applicable agreement for further details.
 (connector
 	(pt 112 160)
 	(pt 48 160)
+)
+(connector
+	(pt 736 376)
+	(pt 768 376)
+	(bus)
+)
+(connector
+	(pt 736 472)
+	(pt 736 376)
+	(bus)
+)
+(connector
+	(pt 736 360)
+	(pt 768 360)
+	(bus)
+)
+(connector
+	(pt 736 304)
+	(pt 736 360)
+	(bus)
+)
+(connector
+	(pt 752 344)
+	(pt 768 344)
+)
+(connector
+	(pt 752 168)
+	(pt 752 344)
+)
+(connector
+	(pt 896 344)
+	(pt 944 344)
+)
+(connector
+	(pt 296 120)
+	(pt 504 120)
+)
+(connector
+	(pt 296 136)
+	(pt 776 136)
+)
+(connector
+	(pt 296 152)
+	(pt 528 152)
+)
+(connector
+	(pt 296 168)
+	(pt 320 168)
 )
 (junction (pt 320 168))
 (junction (pt 88 416))

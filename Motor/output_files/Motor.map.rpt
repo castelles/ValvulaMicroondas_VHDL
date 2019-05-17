@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Motor
-Mon May 13 14:36:59 2019
+Fri May 17 10:11:31 2019
 Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -14,10 +14,10 @@ Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis IP Cores Summary
-  9. State Machine - |Motor|Controlador_e:inst|state_controller
+  9. User-Specified and Inferred Latches
  10. Registers Removed During Synthesis
- 11. General Register Statistics
- 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Removed Registers Triggering Further Register Optimizations
+ 12. General Register Statistics
  13. Parameter Settings for User Entity Instance: lpm_shiftreg0:inst5|lpm_shiftreg:LPM_SHIFTREG_component
  14. Parameter Settings for User Entity Instance: lpm_mux0:inst4|LPM_MUX:LPM_MUX_component
  15. Parameter Settings for User Entity Instance: lpm_counter0:inst3|lpm_counter:LPM_COUNTER_component
@@ -49,16 +49,16 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon May 13 14:36:59 2019           ;
+; Analysis & Synthesis Status        ; Successful - Fri May 17 10:11:31 2019           ;
 ; Quartus II 32-bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; Motor                                           ;
 ; Top-level Entity Name              ; Motor                                           ;
 ; Family                             ; Cyclone IV E                                    ;
-; Total logic elements               ; 0                                               ;
-;     Total combinational functions  ; 0                                               ;
+; Total logic elements               ; 5                                               ;
+;     Total combinational functions  ; 5                                               ;
 ;     Dedicated logic registers      ; 0                                               ;
 ; Total registers                    ; 0                                               ;
-; Total pins                         ; 22                                              ;
+; Total pins                         ; 23                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
@@ -197,42 +197,44 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------------------------------------------------------+---------+
 
 
-+----------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary              ;
-+---------------------------------------------+------------+
-; Resource                                    ; Usage      ;
-+---------------------------------------------+------------+
-;                                             ;            ;
-; Total combinational functions               ; 0          ;
-; Logic element usage by number of LUT inputs ;            ;
-;     -- 4 input functions                    ; 0          ;
-;     -- 3 input functions                    ; 0          ;
-;     -- <=2 input functions                  ; 0          ;
-;                                             ;            ;
-; Logic elements by mode                      ;            ;
-;     -- normal mode                          ; 0          ;
-;     -- arithmetic mode                      ; 0          ;
-;                                             ;            ;
-; Total registers                             ; 0          ;
-;     -- Dedicated logic registers            ; 0          ;
-;     -- I/O registers                        ; 0          ;
-;                                             ;            ;
-; I/O pins                                    ; 22         ;
-; Embedded Multiplier 9-bit elements          ; 0          ;
-; Maximum fan-out node                        ; in0~output ;
-; Maximum fan-out                             ; 1          ;
-; Total fan-out                               ; 22         ;
-; Average fan-out                             ; 0.50       ;
-+---------------------------------------------+------------+
++---------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                         ;
++---------------------------------------------+-----------------------+
+; Resource                                    ; Usage                 ;
++---------------------------------------------+-----------------------+
+; Estimated Total logic elements              ; 5                     ;
+;                                             ;                       ;
+; Total combinational functions               ; 5                     ;
+; Logic element usage by number of LUT inputs ;                       ;
+;     -- 4 input functions                    ; 2                     ;
+;     -- 3 input functions                    ; 3                     ;
+;     -- <=2 input functions                  ; 0                     ;
+;                                             ;                       ;
+; Logic elements by mode                      ;                       ;
+;     -- normal mode                          ; 5                     ;
+;     -- arithmetic mode                      ; 0                     ;
+;                                             ;                       ;
+; Total registers                             ; 0                     ;
+;     -- Dedicated logic registers            ; 0                     ;
+;     -- I/O registers                        ; 0                     ;
+;                                             ;                       ;
+; I/O pins                                    ; 23                    ;
+; Embedded Multiplier 9-bit elements          ; 0                     ;
+; Maximum fan-out node                        ; Controlador_e:inst|rt ;
+; Maximum fan-out                             ; 3                     ;
+; Total fan-out                               ; 42                    ;
+; Average fan-out                             ; 0.82                  ;
++---------------------------------------------+-----------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; |Motor                     ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 22   ; 0            ; |Motor              ; work         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                               ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name       ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------+--------------+
+; |Motor                     ; 5 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 23   ; 0            ; |Motor                    ; work         ;
+;    |Controlador_e:inst|    ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Motor|Controlador_e:inst ; work         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -247,18 +249,16 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------+--------------+---------+--------------+--------------+----------------------------+---------------------------------------------------------------------------------------------------------------------------+
 
 
-Encoding Type:  One-Hot
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |Motor|Controlador_e:inst|state_controller                                                                                                                             ;
-+---------------------------------+-----------------------------+-----------------------------+----------------------------+---------------------------+---------------------------------+
-; Name                            ; state_controller.set_remote ; state_controller.inc_remote ; state_controller.inc_local ; state_controller.ed_local ; state_controller.off_controller ;
-+---------------------------------+-----------------------------+-----------------------------+----------------------------+---------------------------+---------------------------------+
-; state_controller.off_controller ; 0                           ; 0                           ; 0                          ; 0                         ; 0                               ;
-; state_controller.ed_local       ; 0                           ; 0                           ; 0                          ; 1                         ; 1                               ;
-; state_controller.inc_local      ; 0                           ; 0                           ; 1                          ; 0                         ; 1                               ;
-; state_controller.inc_remote     ; 0                           ; 1                           ; 0                          ; 0                         ; 1                               ;
-; state_controller.set_remote     ; 1                           ; 0                           ; 0                          ; 0                         ; 1                               ;
-+---------------------------------+-----------------------------+-----------------------------+----------------------------+---------------------------+---------------------------------+
++-----------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                 ;
++----------------------------------------------------+-----------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal   ; Free of Timing Hazards ;
++----------------------------------------------------+-----------------------+------------------------+
+; Controlador_e:inst|rt                              ; Controlador_e:inst|sp ; yes                    ;
+; Controlador_e:inst|state_controller.set_speed_138  ; Controlador_e:inst|sp ; yes                    ;
+; Number of user-specified and inferred latches = 2  ;                       ;                        ;
++----------------------------------------------------+-----------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -266,15 +266,35 @@ Encoding Type:  One-Hot
 +----------------------------------------------------------------------------------------------------+---------------------------------------------+
 ; Register name                                                                                      ; Reason for Removal                          ;
 +----------------------------------------------------------------------------------------------------+---------------------------------------------+
+; One_delay:inst6|q                                                                                  ; Stuck at GND due to stuck port clock        ;
 ; lpm_counter0:inst3|lpm_counter:LPM_COUNTER_component|cntr_6uj:auto_generated|counter_reg_bit[0..7] ; Stuck at GND due to stuck port clock_enable ;
-; lpm_shiftreg0:inst5|lpm_shiftreg:LPM_SHIFTREG_component|dffs[0..7]                                 ; Stuck at VCC due to stuck port data_in      ;
-; Controlador_e:inst|state_controller.off_controller                                                 ; Lost fanout                                 ;
-; Controlador_e:inst|state_controller.ed_local                                                       ; Lost fanout                                 ;
-; Controlador_e:inst|state_controller.inc_local                                                      ; Lost fanout                                 ;
-; Controlador_e:inst|state_controller.inc_remote                                                     ; Lost fanout                                 ;
-; Controlador_e:inst|state_controller.set_remote                                                     ; Lost fanout                                 ;
-; Total Number of Removed Registers = 21                                                             ;                                             ;
+; lpm_shiftreg0:inst5|lpm_shiftreg:LPM_SHIFTREG_component|dffs[0..7]                                 ; Lost fanout                                 ;
+; Total Number of Removed Registers = 17                                                             ;                                             ;
 +----------------------------------------------------------------------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                    ;
++-------------------+-------------------------+--------------------------------------------------------------------------------------------------+
+; Register name     ; Reason for Removal      ; Registers Removed due to This Register                                                           ;
++-------------------+-------------------------+--------------------------------------------------------------------------------------------------+
+; One_delay:inst6|q ; Stuck at GND            ; lpm_counter0:inst3|lpm_counter:LPM_COUNTER_component|cntr_6uj:auto_generated|counter_reg_bit[7], ;
+;                   ; due to stuck port clock ; lpm_counter0:inst3|lpm_counter:LPM_COUNTER_component|cntr_6uj:auto_generated|counter_reg_bit[6], ;
+;                   ;                         ; lpm_counter0:inst3|lpm_counter:LPM_COUNTER_component|cntr_6uj:auto_generated|counter_reg_bit[5], ;
+;                   ;                         ; lpm_counter0:inst3|lpm_counter:LPM_COUNTER_component|cntr_6uj:auto_generated|counter_reg_bit[4], ;
+;                   ;                         ; lpm_counter0:inst3|lpm_counter:LPM_COUNTER_component|cntr_6uj:auto_generated|counter_reg_bit[3], ;
+;                   ;                         ; lpm_counter0:inst3|lpm_counter:LPM_COUNTER_component|cntr_6uj:auto_generated|counter_reg_bit[2], ;
+;                   ;                         ; lpm_counter0:inst3|lpm_counter:LPM_COUNTER_component|cntr_6uj:auto_generated|counter_reg_bit[1], ;
+;                   ;                         ; lpm_counter0:inst3|lpm_counter:LPM_COUNTER_component|cntr_6uj:auto_generated|counter_reg_bit[0], ;
+;                   ;                         ; lpm_shiftreg0:inst5|lpm_shiftreg:LPM_SHIFTREG_component|dffs[7],                                 ;
+;                   ;                         ; lpm_shiftreg0:inst5|lpm_shiftreg:LPM_SHIFTREG_component|dffs[6],                                 ;
+;                   ;                         ; lpm_shiftreg0:inst5|lpm_shiftreg:LPM_SHIFTREG_component|dffs[5],                                 ;
+;                   ;                         ; lpm_shiftreg0:inst5|lpm_shiftreg:LPM_SHIFTREG_component|dffs[4],                                 ;
+;                   ;                         ; lpm_shiftreg0:inst5|lpm_shiftreg:LPM_SHIFTREG_component|dffs[3],                                 ;
+;                   ;                         ; lpm_shiftreg0:inst5|lpm_shiftreg:LPM_SHIFTREG_component|dffs[2],                                 ;
+;                   ;                         ; lpm_shiftreg0:inst5|lpm_shiftreg:LPM_SHIFTREG_component|dffs[1],                                 ;
+;                   ;                         ; lpm_shiftreg0:inst5|lpm_shiftreg:LPM_SHIFTREG_component|dffs[0]                                  ;
++-------------------+-------------------------+--------------------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -290,15 +310,6 @@ Encoding Type:  One-Hot
 ; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
-
-
-+---------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                    ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output          ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
-; 7:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |Motor|Controlador_e:inst|Selector0 ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------+
@@ -382,7 +393,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -392,7 +403,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Mon May 13 14:36:52 2019
+    Info: Processing started: Fri May 17 10:11:24 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Motor -c Motor
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file controlador_e.vhd
@@ -419,18 +430,33 @@ Info (12021): Found 2 design units, including 1 entities, in source file demux_r
     Info (12022): Found design unit 1: demux_rotation-arq1
     Info (12023): Found entity 1: demux_rotation
 Info (12127): Elaborating entity "Motor" for the top level hierarchy
+Warning (275013): Port "clk" of type One_delay and instance "inst6" is missing source signal
 Info (12128): Elaborating entity "demux_rotation" for hierarchy "demux_rotation:inst7"
-Warning (10492): VHDL Process Statement warning at demux_rotation.vhd(18): signal "data" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at demux_rotation.vhd(19): signal "data" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10631): VHDL Process Statement warning at demux_rotation.vhd(15): inferring latch(es) for signal or variable "in0", which holds its previous value in one or more paths through the process
-Warning (10631): VHDL Process Statement warning at demux_rotation.vhd(15): inferring latch(es) for signal or variable "in1", which holds its previous value in one or more paths through the process
-Info (10041): Inferred latch for "in1" at demux_rotation.vhd(15)
-Info (10041): Inferred latch for "in0" at demux_rotation.vhd(15)
 Info (12128): Elaborating entity "Controlador_e" for hierarchy "Controlador_e:inst"
-Warning (10541): VHDL Signal Declaration warning at Controlador_e.vhd(10): used implicit default value for signal "sp" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at Controlador_e.vhd(11): used implicit default value for signal "rt" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at Controlador_e.vhd(12): used implicit default value for signal "load_reg" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at Controlador_e.vhd(13): used implicit default value for signal "enable" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10492): VHDL Process Statement warning at Controlador_e.vhd(24): signal "remote" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at Controlador_e.vhd(24): signal "local" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at Controlador_e.vhd(30): signal "remote" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at Controlador_e.vhd(30): signal "local" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at Controlador_e.vhd(36): signal "remote" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at Controlador_e.vhd(36): signal "local" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at Controlador_e.vhd(44): signal "state_controller" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at Controlador_e.vhd(46): signal "remote" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at Controlador_e.vhd(46): signal "local" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at Controlador_e.vhd(52): signal "remote" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at Controlador_e.vhd(52): signal "local" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at Controlador_e.vhd(22): inferring latch(es) for signal or variable "sp", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at Controlador_e.vhd(22): inferring latch(es) for signal or variable "rt", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at Controlador_e.vhd(22): inferring latch(es) for signal or variable "load", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at Controlador_e.vhd(22): inferring latch(es) for signal or variable "en_count", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at Controlador_e.vhd(22): inferring latch(es) for signal or variable "state_controller", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "state_controller.shutdown_plate" at Controlador_e.vhd(22)
+Info (10041): Inferred latch for "state_controller.power_engine" at Controlador_e.vhd(22)
+Info (10041): Inferred latch for "state_controller.set_speed" at Controlador_e.vhd(22)
+Info (10041): Inferred latch for "state_controller.standby" at Controlador_e.vhd(22)
+Info (10041): Inferred latch for "en_count" at Controlador_e.vhd(22)
+Info (10041): Inferred latch for "load" at Controlador_e.vhd(22)
+Info (10041): Inferred latch for "rt" at Controlador_e.vhd(22)
+Info (10041): Inferred latch for "sp" at Controlador_e.vhd(22)
 Info (12128): Elaborating entity "Comparador_e" for hierarchy "Comparador_e:inst2"
 Warning (10492): VHDL Process Statement warning at Comparador_e.vhd(17): signal "a" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at Comparador_e.vhd(17): signal "b" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
@@ -455,7 +481,6 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/mux_
     Info (12023): Found entity 1: mux_p7e
 Info (12128): Elaborating entity "mux_p7e" for hierarchy "lpm_mux0:inst4|LPM_MUX:LPM_MUX_component|mux_p7e:auto_generated"
 Info (12128): Elaborating entity "lpm_counter0" for hierarchy "lpm_counter0:inst3"
-Warning (272007): LPM_MODULUS input value is 30000. It should be within the range of 1 to 2^8. Assume no modulus input
 Info (12128): Elaborating entity "lpm_counter" for hierarchy "lpm_counter0:inst3|lpm_counter:LPM_COUNTER_component"
 Warning (287001): Assertion warning: Value of LPM_MODULUS parameter (30000) is too large for a 8-bit counter
 Info (12130): Elaborated megafunction instantiation "lpm_counter0:inst3|lpm_counter:LPM_COUNTER_component"
@@ -470,43 +495,42 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/cntr
     Info (12023): Found entity 1: cntr_6uj
 Info (12128): Elaborating entity "cntr_6uj" for hierarchy "lpm_counter0:inst3|lpm_counter:LPM_COUNTER_component|cntr_6uj:auto_generated"
 Info (12128): Elaborating entity "One_delay" for hierarchy "One_delay:inst6"
-Warning (10541): VHDL Signal Declaration warning at One_delay.vhd(7): used implicit default value for signal "q" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (14026): LATCH primitive "demux_rotation:inst7|in0" is permanently enabled
-Warning (14025): LATCH primitive "demux_rotation:inst7|in1" is permanently disabled
+Warning (13012): Latch Controlador_e:inst|rt has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal enable
+Warning (13012): Latch Controlador_e:inst|state_controller.set_speed_138 has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal key_remote
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "in0" is stuck at VCC
-    Warning (13410): Pin "in1" is stuck at VCC
-Info (17049): 5 registers lost all their fanouts during netlist optimizations.
+    Warning (13410): Pin "duty_cycle" is stuck at VCC
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 8 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 20 input pin(s) that do not drive logic
+Warning (21074): Design contains 17 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "speed_H[7]"
-    Warning (15610): No output dependent on input pin "speed_H[6]"
-    Warning (15610): No output dependent on input pin "speed_H[5]"
-    Warning (15610): No output dependent on input pin "speed_H[4]"
-    Warning (15610): No output dependent on input pin "speed_H[3]"
-    Warning (15610): No output dependent on input pin "speed_H[2]"
-    Warning (15610): No output dependent on input pin "speed_H[1]"
-    Warning (15610): No output dependent on input pin "speed_H[0]"
     Warning (15610): No output dependent on input pin "speed_L[7]"
-    Warning (15610): No output dependent on input pin "speed_L[6]"
-    Warning (15610): No output dependent on input pin "speed_L[5]"
-    Warning (15610): No output dependent on input pin "speed_L[4]"
-    Warning (15610): No output dependent on input pin "speed_L[3]"
-    Warning (15610): No output dependent on input pin "speed_L[2]"
-    Warning (15610): No output dependent on input pin "speed_L[1]"
-    Warning (15610): No output dependent on input pin "speed_L[0]"
-    Warning (15610): No output dependent on input pin "sp_control"
-    Warning (15610): No output dependent on input pin "rt_control"
     Warning (15610): No output dependent on input pin "clk"
-    Warning (15610): No output dependent on input pin "enable"
-Info (21057): Implemented 22 device resources after synthesis - the final resource count might be different
+    Warning (15610): No output dependent on input pin "speed_H[6]"
+    Warning (15610): No output dependent on input pin "speed_L[6]"
+    Warning (15610): No output dependent on input pin "speed_H[5]"
+    Warning (15610): No output dependent on input pin "speed_L[5]"
+    Warning (15610): No output dependent on input pin "speed_H[4]"
+    Warning (15610): No output dependent on input pin "speed_L[4]"
+    Warning (15610): No output dependent on input pin "speed_H[3]"
+    Warning (15610): No output dependent on input pin "speed_L[3]"
+    Warning (15610): No output dependent on input pin "speed_H[2]"
+    Warning (15610): No output dependent on input pin "speed_L[2]"
+    Warning (15610): No output dependent on input pin "speed_H[1]"
+    Warning (15610): No output dependent on input pin "speed_L[1]"
+    Warning (15610): No output dependent on input pin "speed_H[0]"
+    Warning (15610): No output dependent on input pin "speed_L[0]"
+Info (21057): Implemented 28 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 20 input pins
-    Info (21059): Implemented 2 output pins
-Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 41 warnings
+    Info (21059): Implemented 3 output pins
+    Info (21061): Implemented 5 logic cells
+Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 46 warnings
     Info: Peak virtual memory: 0 megabytes
-    Info: Processing ended: Mon May 13 14:36:59 2019
+    Info: Processing ended: Fri May 17 10:11:31 2019
     Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:05
+    Info: Total CPU time (on all processors): 00:00:06
 
 

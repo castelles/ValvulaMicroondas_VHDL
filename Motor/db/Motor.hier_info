@@ -4,9 +4,11 @@ enable => Controlador_e:inst.en4
 clk => Controlador_e:inst.clk
 clk => lpm_shiftreg0:inst5.clock
 clk => lpm_counter0:inst3.clock
-clk => One_delay:inst6.clk
-sp_control => Controlador_e:inst.sp_control
-rt_control => Controlador_e:inst.rt_control
+clk => One_delay:inst6.aclear
+key_remote => Controlador_e:inst.remote
+key_local => Controlador_e:inst.local
+in1 <= demux_rotation:inst7.in1
+duty_cycle <= Comparador_e:inst2.ls
 speed_H[0] => lpm_mux0:inst4.data0x[0]
 speed_H[1] => lpm_mux0:inst4.data0x[1]
 speed_H[2] => lpm_mux0:inst4.data0x[2]
@@ -23,31 +25,31 @@ speed_L[4] => lpm_mux0:inst4.data1x[4]
 speed_L[5] => lpm_mux0:inst4.data1x[5]
 speed_L[6] => lpm_mux0:inst4.data1x[6]
 speed_L[7] => lpm_mux0:inst4.data1x[7]
-in1 <= demux_rotation:inst7.in1
 
 
 |Motor|demux_rotation:inst7
-selectRot => in1$latch.LATCH_ENABLE
-selectRot => in0$latch.LATCH_ENABLE
-data => in1$latch.DATAIN
-data => in0$latch.DATAIN
-in0 <= in0$latch.DB_MAX_OUTPUT_PORT_TYPE
-in1 <= in1$latch.DB_MAX_OUTPUT_PORT_TYPE
+selectRot => in1.DATAIN
+selectRot => in0.DATAIN
+in0 <= selectRot.DB_MAX_OUTPUT_PORT_TYPE
+in1 <= selectRot.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Motor|Controlador_e:inst
-en4 => state_controller~8.DATAIN
-clk => state_controller~6.DATAIN
-sp_control => process_0.IN0
-sp_control => process_0.IN0
-sp_control => process_0.IN0
-rt_control => process_0.IN1
-rt_control => process_0.IN1
-rt_control => process_0.IN1
-sp <= sp.DB_MAX_OUTPUT_PORT_TYPE
-rt <= rt.DB_MAX_OUTPUT_PORT_TYPE
-load_reg <= load_reg.DB_MAX_OUTPUT_PORT_TYPE
-enable <= comb.DB_MAX_OUTPUT_PORT_TYPE
+en4 => process_0.IN0
+en4 => process_0.IN0
+en4 => process_0.IN0
+clk => ~NO_FANOUT~
+remote => process_0.IN1
+remote => process_0.IN1
+remote => process_0.IN1
+local => process_0.IN1
+local => process_0.IN1
+local => process_0.IN1
+local => process_0.IN1
+sp <= sp$latch.DB_MAX_OUTPUT_PORT_TYPE
+rt <= rt$latch.DB_MAX_OUTPUT_PORT_TYPE
+load <= load$latch.DB_MAX_OUTPUT_PORT_TYPE
+en_count <= en_count$latch.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Motor|Comparador_e:inst2
@@ -334,8 +336,9 @@ q[7] <= counter_reg_bit[7].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Motor|One_delay:inst6
-d => ~NO_FANOUT~
-q <= comb.DB_MAX_OUTPUT_PORT_TYPE
-clk => ~NO_FANOUT~
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+aclear => q~reg0.ACLR
+clk => q~reg0.CLK
 
 
