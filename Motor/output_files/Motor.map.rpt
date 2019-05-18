@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Motor
-Fri May 17 17:31:28 2019
+Fri May 17 19:29:43 2019
 Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -49,16 +49,16 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri May 17 17:31:28 2019           ;
+; Analysis & Synthesis Status        ; Successful - Fri May 17 19:29:43 2019           ;
 ; Quartus II 32-bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; Motor                                           ;
 ; Top-level Entity Name              ; Motor                                           ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 40                                              ;
-;     Total combinational functions  ; 40                                              ;
-;     Dedicated logic registers      ; 23                                              ;
-; Total registers                    ; 23                                              ;
-; Total pins                         ; 41                                              ;
+; Total logic elements               ; 43                                              ;
+;     Total combinational functions  ; 42                                              ;
+;     Dedicated logic registers      ; 24                                              ;
+; Total registers                    ; 24                                              ;
+; Total pins                         ; 24                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
@@ -172,6 +172,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; lpm_counter0.vhd                 ; yes             ; User Wizard-Generated File         ; Z:/Users/caiotelles/Google Drive/Universidade/Eletrônica Digital II/Motor_doc/Motor_labDigital_II/Motor/lpm_counter0.vhd   ;         ;
 ; lpm_mux0.vhd                     ; yes             ; User Wizard-Generated File         ; Z:/Users/caiotelles/Google Drive/Universidade/Eletrônica Digital II/Motor_doc/Motor_labDigital_II/Motor/lpm_mux0.vhd       ;         ;
 ; lpm_shiftreg0.vhd                ; yes             ; User Wizard-Generated File         ; Z:/Users/caiotelles/Google Drive/Universidade/Eletrônica Digital II/Motor_doc/Motor_labDigital_II/Motor/lpm_shiftreg0.vhd  ;         ;
+; One_delay.vhd                    ; yes             ; User VHDL File                     ; Z:/Users/caiotelles/Google Drive/Universidade/Eletrônica Digital II/Motor_doc/Motor_labDigital_II/Motor/One_delay.vhd      ;         ;
 ; demux_rotation.vhd               ; yes             ; User VHDL File                     ; Z:/Users/caiotelles/Google Drive/Universidade/Eletrônica Digital II/Motor_doc/Motor_labDigital_II/Motor/demux_rotation.vhd ;         ;
 ; lpm_shiftreg.tdf                 ; yes             ; Megafunction                       ; z:/users/caiotelles/desktop/13.0sp1/quartus/libraries/megafunctions/lpm_shiftreg.tdf                                       ;         ;
 ; lpm_constant.inc                 ; yes             ; Megafunction                       ; z:/users/caiotelles/desktop/13.0sp1/quartus/libraries/megafunctions/lpm_constant.inc                                       ;         ;
@@ -198,28 +199,28 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Estimated Total logic elements              ; 40    ;
+; Estimated Total logic elements              ; 43    ;
 ;                                             ;       ;
-; Total combinational functions               ; 40    ;
+; Total combinational functions               ; 42    ;
 ; Logic element usage by number of LUT inputs ;       ;
 ;     -- 4 input functions                    ; 9     ;
 ;     -- 3 input functions                    ; 21    ;
-;     -- <=2 input functions                  ; 10    ;
+;     -- <=2 input functions                  ; 12    ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 26    ;
+;     -- normal mode                          ; 28    ;
 ;     -- arithmetic mode                      ; 14    ;
 ;                                             ;       ;
-; Total registers                             ; 23    ;
-;     -- Dedicated logic registers            ; 23    ;
+; Total registers                             ; 24    ;
+;     -- Dedicated logic registers            ; 24    ;
 ;     -- I/O registers                        ; 0     ;
 ;                                             ;       ;
-; I/O pins                                    ; 41    ;
+; I/O pins                                    ; 24    ;
 ; Embedded Multiplier 9-bit elements          ; 0     ;
 ; Maximum fan-out node                        ; clk   ;
-; Maximum fan-out                             ; 15    ;
-; Total fan-out                               ; 212   ;
-; Average fan-out                             ; 2.04  ;
+; Maximum fan-out                             ; 24    ;
+; Total fan-out                               ; 202   ;
+; Average fan-out                             ; 2.24  ;
 +---------------------------------------------+-------+
 
 
@@ -228,9 +229,11 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                  ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                 ; Library Name ;
 +---------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------+--------------+
-; |Motor                                      ; 40 (0)            ; 23 (0)       ; 0           ; 0            ; 0       ; 0         ; 41   ; 0            ; |Motor                                                                              ; work         ;
+; |Motor                                      ; 42 (0)            ; 24 (0)       ; 0           ; 0            ; 0       ; 0         ; 24   ; 0            ; |Motor                                                                              ; work         ;
 ;    |Comparador_e:inst2|                     ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Motor|Comparador_e:inst2                                                           ; work         ;
 ;    |Controlador_e:inst|                     ; 16 (16)           ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Motor|Controlador_e:inst                                                           ; work         ;
+;    |One_delay:inst1|                        ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Motor|One_delay:inst1                                                              ; work         ;
+;    |demux_rotation:inst7|                   ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Motor|demux_rotation:inst7                                                         ; work         ;
 ;    |lpm_counter0:inst3|                     ; 8 (0)             ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Motor|lpm_counter0:inst3                                                           ; work         ;
 ;       |lpm_counter:LPM_COUNTER_component|   ; 8 (0)             ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Motor|lpm_counter0:inst3|lpm_counter:LPM_COUNTER_component                         ; work         ;
 ;          |cntr_j9i:auto_generated|          ; 8 (8)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Motor|lpm_counter0:inst3|lpm_counter:LPM_COUNTER_component|cntr_j9i:auto_generated ; work         ;
@@ -279,10 +282,10 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 23    ;
+; Total registers                              ; 24    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 7     ;
-; Number of registers using Asynchronous Clear ; 4     ;
+; Number of registers using Asynchronous Clear ; 5     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 10    ;
 ; Number of registers using Preset             ; 0     ;
@@ -380,7 +383,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -390,7 +393,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Fri May 17 17:31:22 2019
+    Info: Processing started: Fri May 17 19:29:35 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Motor -c Motor
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file controlador_e.vhd
@@ -453,16 +456,17 @@ Info (12133): Instantiated megafunction "lpm_counter0:inst3|lpm_counter:LPM_COUN
 Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_j9i.tdf
     Info (12023): Found entity 1: cntr_j9i
 Info (12128): Elaborating entity "cntr_j9i" for hierarchy "lpm_counter0:inst3|lpm_counter:LPM_COUNTER_component|cntr_j9i:auto_generated"
+Info (12128): Elaborating entity "One_delay" for hierarchy "One_delay:inst1"
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 81 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 67 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 21 input pins
-    Info (21059): Implemented 20 output pins
-    Info (21061): Implemented 40 logic cells
+    Info (21059): Implemented 3 output pins
+    Info (21061): Implemented 43 logic cells
 Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 3 warnings
     Info: Peak virtual memory: 0 megabytes
-    Info: Processing ended: Fri May 17 17:31:28 2019
-    Info: Elapsed time: 00:00:06
+    Info: Processing ended: Fri May 17 19:29:43 2019
+    Info: Elapsed time: 00:00:08
     Info: Total CPU time (on all processors): 00:00:05
 
 
