@@ -10,7 +10,10 @@ entity Controlador_e is
 			sp 			: out std_logic;
 			rt				: out std_logic;
 			load   		: out std_logic;
-			en_count		: out std_logic
+			en_count		: out std_logic;
+			speed_low   : out std_logic_vector(7 downto 0) := "00001100";
+			speed_high  : out std_logic_vector(7 downto 0) := "11111111";
+			led_enable  : out std_logic := '0'
 		 );
 end Controlador_e;
 
@@ -23,8 +26,9 @@ begin
 		begin
 			if en4 = '0' then
 				state_controller <= standby;
-				
+				led_enable <= '0';
 			elsif rising_edge(clk) then
+				
 				case state_controller is
 					
 					when standby => if en4 = '1' and  remote = '0' and local = '0' then
@@ -32,18 +36,21 @@ begin
 											rt <= '0';
 											load <= '0';
 											en_count <= '0';
+											led_enable <= '1';
 											state_controller <= hold;
 										 elsif en4 = '1' and  remote = '1' and local = '0' then
 											sp <= '1';
 											rt <= '1';
 											load <= '1';
 											en_count <= '0';
+											led_enable <= '1';
 											state_controller <= set_speed;
 										 elsif en4 = '1' and remote = '0' and local = '1' then
 											sp <= '0';
 											rt <= '0';
 											load <= '1';
 											en_count <= '0';
+											led_enable <= '1';
 											state_controller <= set_speed;	
 										 end if;
 					
@@ -52,29 +59,39 @@ begin
 											rt <= '1';
 											load <= '1';
 											en_count <= '0';
+											led_enable <= '1';
 											state_controller <= set_speed;
 									 elsif en4 = '1' and remote = '0' and local = '1' then
 											sp <= '0';
 											rt <= '0';
 											load <= '1';
 											en_count <= '0';
-											state_controller <= set_speed;	
-									 elsif en4 = '0' and  remote = '0' and local = '0' then
+											led_enable <= '1';
+											state_controller <= set_speed;
+									elsif en4 = '1' and remote = '0' and local = '0' then
 											sp <= '0';
 											rt <= '0';
 											load <= '0';
 											en_count <= '0';
+											led_enable <= '1';
+									 elsif en4 = '0' then 
+											sp <= '0';
+											rt <= '0';
+											load <= '0';
+											en_count <= '0';
+											led_enable <= '0';
 											state_controller <= standby;
 									 end if;
 					
 					when set_speed => en_count <= '1';
 											state_controller <= power_engine;
-					
+				
 					when power_engine => if en4 = '1' and  remote = '0' and local = '0' then
 													sp <= '0';
 													rt <= '0';
 													load <= '0';
 													en_count <= '0';
+													led_enable <= '1';
 													state_controller <= hold;
 												end if;
 				 end case;

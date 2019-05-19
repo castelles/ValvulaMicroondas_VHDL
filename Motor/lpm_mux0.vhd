@@ -42,8 +42,8 @@ USE lpm.lpm_components.all;
 ENTITY lpm_mux0 IS
 	PORT
 	(
-		data0x		: IN STD_LOGIC_VECTOR (7 DOWNTO 0) := "11111111";
-		data1x		: IN STD_LOGIC_VECTOR (7 DOWNTO 0) := "01100110";
+		data0x		: IN STD_LOGIC_VECTOR (7 DOWNTO 0);
+		data1x		: IN STD_LOGIC_VECTOR (7 DOWNTO 0);
 		sel		: IN STD_LOGIC ;
 		result		: OUT STD_LOGIC_VECTOR (7 DOWNTO 0)
 	);
