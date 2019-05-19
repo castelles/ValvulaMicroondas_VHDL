@@ -87,15 +87,15 @@ nCONFIG                      : 20        :        :                   :         
 GND+                         : 21        :        :                   :         : 1         :                
 GND+                         : 22        :        :                   :         : 1         :                
 VCCIO1                       : 23        : power  :                   : 2.5V    : 1         :                
-GND*                         : 24        :        :                   :         : 1         :                
-GND*                         : 25        :        :                   :         : 1         :                
-GND*                         : 26        :        :                   :         : 1         :                
-GND*                         : 27        :        :                   :         : 1         :                
+local_led3                   : 24        : output : 2.5 V             :         : 1         : N              
+local_led1                   : 25        : output : 2.5 V             :         : 1         : N              
+in0                          : 26        : output : 2.5 V             :         : 1         : N              
+local_led2                   : 27        : output : 2.5 V             :         : 1         : N              
 GND*                         : 28        :        :                   :         : 1         :                
 VCCIO1                       : 29        : power  :                   : 2.5V    : 1         :                
-GND*                         : 30        :        :                   :         : 1         :                
-GND*                         : 31        :        :                   :         : 1         :                
-GND*                         : 32        :        :                   :         : 1         :                
+remote_led3                  : 30        : output : 2.5 V             :         : 1         : N              
+in1                          : 31        : output : 2.5 V             :         : 1         : N              
+remote_led2                  : 32        : output : 2.5 V             :         : 1         : N              
 GND                          : 33        : gnd    :                   :         :           :                
 GND_PLL1                     : 34        : gnd    :                   :         :           :                
 VCCD_PLL1                    : 35        : power  :                   : 1.2V    :           :                
@@ -103,15 +103,15 @@ GND_PLL1                     : 36        : gnd    :                   :         
 VCCA_PLL1                    : 37        : power  :                   : 1.2V    :           :                
 GNDA_PLL1                    : 38        : gnd    :                   :         :           :                
 GND                          : 39        : gnd    :                   :         :           :                
-GND*                         : 40        :        :                   :         : 4         :                
-GND*                         : 41        :        :                   :         : 4         :                
-GND*                         : 42        :        :                   :         : 4         :                
-GND*                         : 43        :        :                   :         : 4         :                
-GND*                         : 44        :        :                   :         : 4         :                
-GND*                         : 45        :        :                   :         : 4         :                
+key_local                    : 40        : input  : 2.5 V             :         : 4         : N              
+remote_led1                  : 41        : output : 2.5 V             :         : 4         : N              
+key_remote                   : 42        : input  : 2.5 V             :         : 4         : N              
+power_led1                   : 43        : output : 2.5 V             :         : 4         : N              
+duty_cycle                   : 44        : output : 2.5 V             :         : 4         : N              
+en_led2                      : 45        : output : 2.5 V             :         : 4         : N              
 VCCIO4                       : 46        : power  :                   : 2.5V    : 4         :                
-GND*                         : 47        :        :                   :         : 4         :                
-GND*                         : 48        :        :                   :         : 4         :                
+en_led3                      : 47        : output : 2.5 V             :         : 4         : N              
+en_led1                      : 48        : output : 2.5 V             :         : 4         : N              
 GND                          : 49        : gnd    :                   :         :           :                
 VCCINT                       : 50        : power  :                   : 1.2V    :           :                
 GND*                         : 51        :        :                   :         : 4         :                
@@ -149,25 +149,25 @@ nSTATUS                      : 82        :        :                   :         
 CONF_DONE                    : 83        :        :                   :         : 3         :                
 MSEL1                        : 84        :        :                   :         : 3         :                
 MSEL0                        : 85        :        :                   :         : 3         :                
-speed_H[5]                   : 86        : input  : 2.5 V             :         : 3         : N              
-speed_H[1]                   : 87        : input  : 2.5 V             :         : 3         : N              
-speed_L[5]                   : 88        : input  : 2.5 V             :         : 3         : N              
-speed_H[4]                   : 89        : input  : 2.5 V             :         : 3         : N              
-speed_L[4]                   : 90        : input  : 2.5 V             :         : 3         : N              
-speed_H[3]                   : 91        : input  : 2.5 V             :         : 3         : N              
-speed_L[2]                   : 92        : input  : 2.5 V             :         : 3         : N              
-speed_L[7]                   : 93        : input  : 2.5 V             :         : 3         : N              
-speed_L[0]                   : 94        : input  : 2.5 V             :         : 3         : N              
+GND*                         : 86        :        :                   :         : 3         :                
+GND*                         : 87        :        :                   :         : 3         :                
+GND+                         : 88        :        :                   :         : 3         :                
+GND+                         : 89        :        :                   :         : 3         :                
+GND+                         : 90        :        :                   :         : 3         :                
+GND+                         : 91        :        :                   :         : 3         :                
+GND*                         : 92        :        :                   :         : 3         :                
+GND*                         : 93        :        :                   :         : 3         :                
+GND*                         : 94        :        :                   :         : 3         :                
 VCCIO3                       : 95        : power  :                   : 2.5V    : 3         :                
-speed_H[0]                   : 96        : input  : 2.5 V             :         : 3         : N              
-speed_L[3]                   : 97        : input  : 2.5 V             :         : 3         : N              
+GND*                         : 96        :        :                   :         : 3         :                
+GND*                         : 97        :        :                   :         : 3         :                
 GND                          : 98        : gnd    :                   :         :           :                
-speed_H[6]                   : 99        : input  : 2.5 V             :         : 3         : N              
-speed_H[7]                   : 100       : input  : 2.5 V             :         : 3         : N              
-speed_L[1]                   : 101       : input  : 2.5 V             :         : 3         : N              
+GND*                         : 99        :        :                   :         : 3         :                
+GND*                         : 100       :        :                   :         : 3         :                
+GND*                         : 101       :        :                   :         : 3         :                
 VCCIO3                       : 102       : power  :                   : 2.5V    : 3         :                
-speed_H[2]                   : 103       : input  : 2.5 V             :         : 3         : N              
-speed_L[6]                   : 104       : input  : 2.5 V             :         : 3         : N              
+GND*                         : 103       :        :                   :         : 3         :                
+GND*                         : 104       :        :                   :         : 3         :                
 GND                          : 105       : gnd    :                   :         :           :                
 GND_PLL2                     : 106       : gnd    :                   :         :           :                
 VCCD_PLL2                    : 107       : power  :                   : 1.2V    :           :                
@@ -175,14 +175,14 @@ GND_PLL2                     : 108       : gnd    :                   :         
 VCCA_PLL2                    : 109       : power  :                   : 1.2V    :           :                
 GNDA_PLL2                    : 110       : gnd    :                   :         :           :                
 GND                          : 111       : gnd    :                   :         :           :                
-duty_cycle                   : 112       : output : 2.5 V             :         : 2         : N              
-in0                          : 113       : output : 2.5 V             :         : 2         : N              
-aclear                       : 114       : input  : 2.5 V             :         : 2         : N              
-key_remote                   : 115       : input  : 2.5 V             :         : 2         : N              
+GND*                         : 112       :        :                   :         : 2         :                
+GND*                         : 113       :        :                   :         : 2         :                
+GND*                         : 114       :        :                   :         : 2         :                
+GND*                         : 115       :        :                   :         : 2         :                
 VCCIO2                       : 116       : power  :                   : 2.5V    : 2         :                
 GND                          : 117       : gnd    :                   :         :           :                
-key_local                    : 118       : input  : 2.5 V             :         : 2         : N              
-in1                          : 119       : output : 2.5 V             :         : 2         : N              
+GND*                         : 118       :        :                   :         : 2         :                
+GND*                         : 119       :        :                   :         : 2         :                
 GND*                         : 120       :        :                   :         : 2         :                
 GND*                         : 121       :        :                   :         : 2         :                
 GND*                         : 122       :        :                   :         : 2         :                
@@ -207,4 +207,4 @@ GND                          : 140       : gnd    :                   :         
 GND*                         : 141       :        :                   :         : 2         :                
 GND*                         : 142       :        :                   :         : 2         :                
 GND*                         : 143       :        :                   :         : 2         :                
-GND*                         : 144       :        :                   :         : 2         :                
+aclear                       : 144       : input  : 2.5 V             :         : 2         : N              

@@ -86,7 +86,8 @@ begin
 					when set_speed => en_count <= '1';
 											state_controller <= power_engine;
 				
-					when power_engine => if en4 = '1' and  remote = '0' and local = '0' then
+					when power_engine => load <='0';
+												if en4 = '1' and  remote = '0' and local = '0' then
 													sp <= '0';
 													rt <= '0';
 													load <= '0';
