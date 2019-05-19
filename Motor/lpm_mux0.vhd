@@ -123,6 +123,6 @@ END SYN;
 -- Retrieval info: GEN_FILE: TYPE_NORMAL lpm_mux0.vhd TRUE
 -- Retrieval info: GEN_FILE: TYPE_NORMAL lpm_mux0.inc FALSE
 -- Retrieval info: GEN_FILE: TYPE_NORMAL lpm_mux0.cmp TRUE
--- Retrieval info: GEN_FILE: TYPE_NORMAL lpm_mux0.bsf TRUE
+-- Retrieval info: GEN_FILE: TYPE_NORMAL lpm_mux0.bsf TRUE FALSE
 -- Retrieval info: GEN_FILE: TYPE_NORMAL lpm_mux0_inst.vhd FALSE
 -- Retrieval info: LIB_FILE: lpm

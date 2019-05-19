@@ -1,8 +1,8 @@
 <sld_project_info>
   <project>
-    <hash md5_digest_80b="813d0b7ad6eb1c8a41bf"/>
+    <hash md5_digest_80b="898510ea185c866bc7cb"/>
   </project>
   <file_info>
-    <file device="EP2C5T144C6" path="Motor.sof" usercode="0xFFFFFFFF"/>
+    <file device="EP4CE6E22C8" path="motor.sof" usercode="0xFFFFFFFF"/>
   </file_info>
 </sld_project_info>

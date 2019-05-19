@@ -16,16 +16,16 @@
 #
 # -------------------------------------------------------------------------- #
 #
-# Quartus II 32-bit
+# Quartus II 64-Bit
 # Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-# Date created = 20:15:56  May 07, 2019
+# Date created = 11:41:47  May 19, 2019
 #
 # -------------------------------------------------------------------------- #
 #
 # Notes:
 #
 # 1) The default values for assignments are stored in the file:
-#		Motor_assignment_defaults.qdf
+#		motor_assignment_defaults.qdf
 #    If this file doesn't exist, see file:
 #		assignment_defaults.qdf
 #
@@ -36,37 +36,46 @@
 # -------------------------------------------------------------------------- #
 
 
-set_global_assignment -name FAMILY "Cyclone II"
-set_global_assignment -name DEVICE AUTO
-set_global_assignment -name TOP_LEVEL_ENTITY Motor
+set_global_assignment -name FAMILY "Cyclone IV E"
+set_global_assignment -name DEVICE EP4CE6E22C8
+set_global_assignment -name TOP_LEVEL_ENTITY motor
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION "13.0 SP1"
-set_global_assignment -name PROJECT_CREATION_TIME_DATE "20:15:56  MAY 07, 2019"
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "11:41:47  MAY 19, 2019"
 set_global_assignment -name LAST_QUARTUS_VERSION "13.0 SP1"
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
+set_global_assignment -name NOMINAL_CORE_SUPPLY_VOLTAGE 1.2V
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name VHDL_FILE One_delay.vhd
+set_global_assignment -name VHDL_FILE led_controller.vhd
+set_global_assignment -name VHDL_FILE dsf_shiftregister.vhd
+set_global_assignment -name VHDL_FILE demux_rotation.vhd
+set_global_assignment -name VHDL_FILE Controlador_e.vhd
+set_global_assignment -name VHDL_FILE Comparador_e.vhd
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
-set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
-set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (Verilog)"
-set_global_assignment -name EDA_USER_COMPILED_SIMULATION_LIBRARY_DIRECTORY "Z:/Users/caiotelles/Google Drive/Universidade/Eletrônica Digital II/Motor_doc/Motor_labDigital_II/Simulador" -section_id eda_simulation
-set_global_assignment -name SIMULATION_MODE FUNCTIONAL
-set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
-set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST ON -section_id eda_simulation
-set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "2.5 V"
-set_global_assignment -name VHDL_FILE Controlador_e.vhd
-set_global_assignment -name VHDL_FILE Comparador_e.vhd
-set_global_assignment -name BDF_FILE Motor.bdf
-set_global_assignment -name QIP_FILE lpm_counter0.qip
 set_global_assignment -name QIP_FILE lpm_mux0.qip
-set_global_assignment -name VHDL_FILE One_delay.vhd
-set_global_assignment -name VHDL_FILE demux_rotation.vhd
-set_global_assignment -name VECTOR_WAVEFORM_FILE Motor.vwf
-set_global_assignment -name EDA_TIME_SCALE "1 ps" -section_id eda_simulation
-set_global_assignment -name TIMEQUEST_DO_CCPP_REMOVAL OFF
-set_global_assignment -name VECTOR_OUTPUT_FORMAT VWF
-set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE "Z:/Users/caiotelles/Google Drive/Universidade/Eletrônica Digital II/Motor_doc/Motor_labDigital_II/Motor/Motor.vwf"
-set_global_assignment -name VHDL_FILE led_controller.vhd
-set_global_assignment -name VHDL_FILE dsf_shiftregister.vhd
+set_global_assignment -name QIP_FILE lpm_counter0.qip
+set_global_assignment -name BDF_FILE motor.bdf
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "2.5 V"
+set_location_assignment PIN_23 -to clk
+set_location_assignment PIN_42 -to duty_cycle
+set_location_assignment PIN_68 -to enable
+set_location_assignment PIN_44 -to in0
+set_location_assignment PIN_49 -to in1
+set_location_assignment PIN_66 -to key_local
+set_location_assignment PIN_64 -to key_remote
+set_location_assignment PIN_72 -to led_ctrl
+set_location_assignment PIN_73 -to led_ctrl2
+set_location_assignment PIN_74 -to led_ctrl3
+set_location_assignment PIN_70 -to led_left2
+set_location_assignment PIN_69 -to led_right
+set_location_assignment PIN_71 -to led_right3
+set_location_assignment PIN_75 -to led_power
+set_location_assignment PIN_76 -to led_power2
+set_location_assignment PIN_77 -to led_power3
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

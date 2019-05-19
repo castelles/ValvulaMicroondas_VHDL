@@ -1,43 +1,47 @@
-|Motor
-in0 <= demux_rotation:inst7.in0
-enable => Controlador_e:inst.en4
+|motor
+led_ctrl <= led_controller:inst5.led_out
+clk => led_controller:inst5.clk
 clk => Controlador_e:inst.clk
-clk => dsf_shiftregister:inst8.clk
-clk => lpm_counter0:inst3.clock
-clk => One_delay:inst1.clk
+clk => dsf_shiftregister:inst2.clk
+clk => lpm_counter0:inst10.clock
+clk => led_controller:inst8.clk
+clk => led_controller:inst7.clk
+clk => led_controller:inst6.clk
+enable => Controlador_e:inst.en4
 key_remote => Controlador_e:inst.remote
 key_local => Controlador_e:inst.local
-in1 <= demux_rotation:inst7.in1
-duty_cycle <= Comparador_e:inst2.ls
-en_led1 <= led_controller:inst6.led_out
-en_led2 <= led_controller:inst6.led_out2
-en_led3 <= led_controller:inst6.led_out3
-local_led1 <= led_controller:inst10.led_out
-local_led2 <= led_controller:inst10.led_out2
-local_led3 <= led_controller:inst10.led_out3
-remote_led1 <= led_controller:inst9.led_out
-remote_led2 <= led_controller:inst9.led_out2
-remote_led3 <= led_controller:inst9.led_out3
-power_led1 <= Comparador_e:inst2.led_ls
-aclear => One_delay:inst1.aclear
+led_ctrl2 <= led_controller:inst5.led_out2
+led_ctrl3 <= led_controller:inst5.led_out3
+duty_cycle <= Comparador_e:inst4.ls
+in0 <= demux_rotation:inst3.in0
+in1 <= demux_rotation:inst3.in1
+led_right <= led_controller:inst8.led_out
+led_right2 <= led_controller:inst8.led_out2
+led_right3 <= led_controller:inst8.led_out3
+led_left <= led_controller:inst7.led_out3
+led_left2 <= led_controller:inst7.led_out2
+led_left3 <= led_controller:inst7.led_out
+led_power <= led_controller:inst6.led_out3
+led_power2 <= led_controller:inst6.led_out2
+led_power3 <= led_controller:inst6.led_out
 
 
-|Motor|demux_rotation:inst7
-selectRot => in1.DATAA
-selectRot => led_in1.DATAA
-selectRot => in0.DATAA
-selectRot => led_in0.DATAA
-enable_rot => in0.OUTPUTSELECT
-enable_rot => in1.OUTPUTSELECT
-enable_rot => led_in0.OUTPUTSELECT
-enable_rot => led_in1.OUTPUTSELECT
-in0 <= in0.DB_MAX_OUTPUT_PORT_TYPE
-in1 <= in1.DB_MAX_OUTPUT_PORT_TYPE
-led_in0 <= led_in0.DB_MAX_OUTPUT_PORT_TYPE
-led_in1 <= led_in1.DB_MAX_OUTPUT_PORT_TYPE
+|motor|led_controller:inst5
+clk => led_out3~reg0.CLK
+clk => led_out2~reg0.CLK
+clk => led_out~reg0.CLK
+control => led_out.OUTPUTSELECT
+control => led_out2.OUTPUTSELECT
+control => led_out3.OUTPUTSELECT
+control => led_out.OUTPUTSELECT
+control => led_out2.OUTPUTSELECT
+control => led_out3.OUTPUTSELECT
+led_out <= led_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+led_out2 <= led_out2~reg0.DB_MAX_OUTPUT_PORT_TYPE
+led_out3 <= led_out3~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Motor|Controlador_e:inst
+|motor|Controlador_e:inst
 en4 => process_0.IN0
 en4 => process_0.IN0
 en4 => sp.OUTPUTSELECT
@@ -71,12 +75,12 @@ rt <= rt~reg0.DB_MAX_OUTPUT_PORT_TYPE
 load <= load~reg0.DB_MAX_OUTPUT_PORT_TYPE
 en_count <= en_count~reg0.DB_MAX_OUTPUT_PORT_TYPE
 speed_low[0] <= <GND>
-speed_low[1] <= <GND>
+speed_low[1] <= <VCC>
 speed_low[2] <= <VCC>
-speed_low[3] <= <VCC>
+speed_low[3] <= <GND>
 speed_low[4] <= <GND>
-speed_low[5] <= <GND>
-speed_low[6] <= <GND>
+speed_low[5] <= <VCC>
+speed_low[6] <= <VCC>
 speed_low[7] <= <GND>
 speed_high[0] <= <VCC>
 speed_high[1] <= <VCC>
@@ -89,7 +93,7 @@ speed_high[7] <= <VCC>
 led_enable <= led_enable~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Motor|Comparador_e:inst2
+|motor|Comparador_e:inst4
 en => ls.IN1
 en => led_ls.IN1
 en => led_ls.OUTPUTSELECT
@@ -130,7 +134,7 @@ ls <= ls$latch.DB_MAX_OUTPUT_PORT_TYPE
 led_ls <= led_ls$latch.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Motor|dsf_shiftregister:inst8
+|motor|dsf_shiftregister:inst2
 load => speed_register[0]~reg0.ENA
 load => speed_register[1]~reg0.ENA
 load => speed_register[2]~reg0.ENA
@@ -165,7 +169,7 @@ speed_register[6] <= speed_register[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 speed_register[7] <= speed_register[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Motor|lpm_mux0:inst4
+|motor|lpm_mux0:inst9
 data0x[0] => LPM_MUX:LPM_MUX_component.DATA[0][0]
 data0x[1] => LPM_MUX:LPM_MUX_component.DATA[0][1]
 data0x[2] => LPM_MUX:LPM_MUX_component.DATA[0][2]
@@ -193,38 +197,38 @@ result[6] <= LPM_MUX:LPM_MUX_component.RESULT[6]
 result[7] <= LPM_MUX:LPM_MUX_component.RESULT[7]
 
 
-|Motor|lpm_mux0:inst4|LPM_MUX:LPM_MUX_component
-data[0][0] => mux_73e:auto_generated.data[0]
-data[0][1] => mux_73e:auto_generated.data[1]
-data[0][2] => mux_73e:auto_generated.data[2]
-data[0][3] => mux_73e:auto_generated.data[3]
-data[0][4] => mux_73e:auto_generated.data[4]
-data[0][5] => mux_73e:auto_generated.data[5]
-data[0][6] => mux_73e:auto_generated.data[6]
-data[0][7] => mux_73e:auto_generated.data[7]
-data[1][0] => mux_73e:auto_generated.data[8]
-data[1][1] => mux_73e:auto_generated.data[9]
-data[1][2] => mux_73e:auto_generated.data[10]
-data[1][3] => mux_73e:auto_generated.data[11]
-data[1][4] => mux_73e:auto_generated.data[12]
-data[1][5] => mux_73e:auto_generated.data[13]
-data[1][6] => mux_73e:auto_generated.data[14]
-data[1][7] => mux_73e:auto_generated.data[15]
-sel[0] => mux_73e:auto_generated.sel[0]
+|motor|lpm_mux0:inst9|LPM_MUX:LPM_MUX_component
+data[0][0] => mux_p7e:auto_generated.data[0]
+data[0][1] => mux_p7e:auto_generated.data[1]
+data[0][2] => mux_p7e:auto_generated.data[2]
+data[0][3] => mux_p7e:auto_generated.data[3]
+data[0][4] => mux_p7e:auto_generated.data[4]
+data[0][5] => mux_p7e:auto_generated.data[5]
+data[0][6] => mux_p7e:auto_generated.data[6]
+data[0][7] => mux_p7e:auto_generated.data[7]
+data[1][0] => mux_p7e:auto_generated.data[8]
+data[1][1] => mux_p7e:auto_generated.data[9]
+data[1][2] => mux_p7e:auto_generated.data[10]
+data[1][3] => mux_p7e:auto_generated.data[11]
+data[1][4] => mux_p7e:auto_generated.data[12]
+data[1][5] => mux_p7e:auto_generated.data[13]
+data[1][6] => mux_p7e:auto_generated.data[14]
+data[1][7] => mux_p7e:auto_generated.data[15]
+sel[0] => mux_p7e:auto_generated.sel[0]
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
-result[0] <= mux_73e:auto_generated.result[0]
-result[1] <= mux_73e:auto_generated.result[1]
-result[2] <= mux_73e:auto_generated.result[2]
-result[3] <= mux_73e:auto_generated.result[3]
-result[4] <= mux_73e:auto_generated.result[4]
-result[5] <= mux_73e:auto_generated.result[5]
-result[6] <= mux_73e:auto_generated.result[6]
-result[7] <= mux_73e:auto_generated.result[7]
+result[0] <= mux_p7e:auto_generated.result[0]
+result[1] <= mux_p7e:auto_generated.result[1]
+result[2] <= mux_p7e:auto_generated.result[2]
+result[3] <= mux_p7e:auto_generated.result[3]
+result[4] <= mux_p7e:auto_generated.result[4]
+result[5] <= mux_p7e:auto_generated.result[5]
+result[6] <= mux_p7e:auto_generated.result[6]
+result[7] <= mux_p7e:auto_generated.result[7]
 
 
-|Motor|lpm_mux0:inst4|LPM_MUX:LPM_MUX_component|mux_73e:auto_generated
+|motor|lpm_mux0:inst9|LPM_MUX:LPM_MUX_component|mux_p7e:auto_generated
 data[0] => result_node[0].IN1
 data[1] => result_node[1].IN1
 data[2] => result_node[2].IN1
@@ -267,7 +271,7 @@ sel[0] => result_node[0].IN0
 sel[0] => _.IN0
 
 
-|Motor|lpm_counter0:inst3
+|motor|lpm_counter0:inst10
 clock => lpm_counter:LPM_COUNTER_component.clock
 cnt_en => lpm_counter:LPM_COUNTER_component.cnt_en
 q[0] <= lpm_counter:LPM_COUNTER_component.q[0]
@@ -280,10 +284,10 @@ q[6] <= lpm_counter:LPM_COUNTER_component.q[6]
 q[7] <= lpm_counter:LPM_COUNTER_component.q[7]
 
 
-|Motor|lpm_counter0:inst3|lpm_counter:LPM_COUNTER_component
-clock => cntr_j9i:auto_generated.clock
+|motor|lpm_counter0:inst10|lpm_counter:LPM_COUNTER_component
+clock => cntr_5ei:auto_generated.clock
 clk_en => ~NO_FANOUT~
-cnt_en => cntr_j9i:auto_generated.cnt_en
+cnt_en => cntr_5ei:auto_generated.cnt_en
 updown => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 aset => ~NO_FANOUT~
@@ -302,14 +306,14 @@ data[5] => ~NO_FANOUT~
 data[6] => ~NO_FANOUT~
 data[7] => ~NO_FANOUT~
 cin => ~NO_FANOUT~
-q[0] <= cntr_j9i:auto_generated.q[0]
-q[1] <= cntr_j9i:auto_generated.q[1]
-q[2] <= cntr_j9i:auto_generated.q[2]
-q[3] <= cntr_j9i:auto_generated.q[3]
-q[4] <= cntr_j9i:auto_generated.q[4]
-q[5] <= cntr_j9i:auto_generated.q[5]
-q[6] <= cntr_j9i:auto_generated.q[6]
-q[7] <= cntr_j9i:auto_generated.q[7]
+q[0] <= cntr_5ei:auto_generated.q[0]
+q[1] <= cntr_5ei:auto_generated.q[1]
+q[2] <= cntr_5ei:auto_generated.q[2]
+q[3] <= cntr_5ei:auto_generated.q[3]
+q[4] <= cntr_5ei:auto_generated.q[4]
+q[5] <= cntr_5ei:auto_generated.q[5]
+q[6] <= cntr_5ei:auto_generated.q[6]
+q[7] <= cntr_5ei:auto_generated.q[7]
 cout <= <GND>
 eq[0] <= <GND>
 eq[1] <= <GND>
@@ -329,57 +333,79 @@ eq[14] <= <GND>
 eq[15] <= <GND>
 
 
-|Motor|lpm_counter0:inst3|lpm_counter:LPM_COUNTER_component|cntr_j9i:auto_generated
-clock => counter_reg_bit1a[7].CLK
-clock => counter_reg_bit1a[6].CLK
-clock => counter_reg_bit1a[5].CLK
-clock => counter_reg_bit1a[4].CLK
-clock => counter_reg_bit1a[3].CLK
-clock => counter_reg_bit1a[2].CLK
-clock => counter_reg_bit1a[1].CLK
-clock => counter_reg_bit1a[0].CLK
+|motor|lpm_counter0:inst10|lpm_counter:LPM_COUNTER_component|cntr_5ei:auto_generated
+clock => counter_reg_bit[7].CLK
+clock => counter_reg_bit[6].CLK
+clock => counter_reg_bit[5].CLK
+clock => counter_reg_bit[4].CLK
+clock => counter_reg_bit[3].CLK
+clock => counter_reg_bit[2].CLK
+clock => counter_reg_bit[1].CLK
+clock => counter_reg_bit[0].CLK
 cnt_en => _.IN1
-q[0] <= counter_reg_bit1a[0].REGOUT
-q[1] <= counter_reg_bit1a[1].REGOUT
-q[2] <= counter_reg_bit1a[2].REGOUT
-q[3] <= counter_reg_bit1a[3].REGOUT
-q[4] <= counter_reg_bit1a[4].REGOUT
-q[5] <= counter_reg_bit1a[5].REGOUT
-q[6] <= counter_reg_bit1a[6].REGOUT
-q[7] <= counter_reg_bit1a[7].REGOUT
+q[0] <= counter_reg_bit[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= counter_reg_bit[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= counter_reg_bit[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= counter_reg_bit[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= counter_reg_bit[4].DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= counter_reg_bit[5].DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= counter_reg_bit[6].DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= counter_reg_bit[7].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Motor|led_controller:inst6
-control => led_out.DATAIN
-control => led_out2.DATAIN
-control => led_out3.DATAIN
-led_out <= control.DB_MAX_OUTPUT_PORT_TYPE
-led_out2 <= control.DB_MAX_OUTPUT_PORT_TYPE
-led_out3 <= control.DB_MAX_OUTPUT_PORT_TYPE
+|motor|demux_rotation:inst3
+selectRot => in1.DATAA
+selectRot => in0.DATAA
+enable_rot => in1.OUTPUTSELECT
+enable_rot => in0.OUTPUTSELECT
+in0 <= in0.DB_MAX_OUTPUT_PORT_TYPE
+in1 <= in1.DB_MAX_OUTPUT_PORT_TYPE
+led_in0 <= in0.DB_MAX_OUTPUT_PORT_TYPE
+led_in1 <= in1.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Motor|led_controller:inst10
-control => led_out.DATAIN
-control => led_out2.DATAIN
-control => led_out3.DATAIN
-led_out <= control.DB_MAX_OUTPUT_PORT_TYPE
-led_out2 <= control.DB_MAX_OUTPUT_PORT_TYPE
-led_out3 <= control.DB_MAX_OUTPUT_PORT_TYPE
+|motor|led_controller:inst8
+clk => led_out3~reg0.CLK
+clk => led_out2~reg0.CLK
+clk => led_out~reg0.CLK
+control => led_out.OUTPUTSELECT
+control => led_out2.OUTPUTSELECT
+control => led_out3.OUTPUTSELECT
+control => led_out.OUTPUTSELECT
+control => led_out2.OUTPUTSELECT
+control => led_out3.OUTPUTSELECT
+led_out <= led_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+led_out2 <= led_out2~reg0.DB_MAX_OUTPUT_PORT_TYPE
+led_out3 <= led_out3~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Motor|led_controller:inst9
-control => led_out.DATAIN
-control => led_out2.DATAIN
-control => led_out3.DATAIN
-led_out <= control.DB_MAX_OUTPUT_PORT_TYPE
-led_out2 <= control.DB_MAX_OUTPUT_PORT_TYPE
-led_out3 <= control.DB_MAX_OUTPUT_PORT_TYPE
+|motor|led_controller:inst7
+clk => led_out3~reg0.CLK
+clk => led_out2~reg0.CLK
+clk => led_out~reg0.CLK
+control => led_out.OUTPUTSELECT
+control => led_out2.OUTPUTSELECT
+control => led_out3.OUTPUTSELECT
+control => led_out.OUTPUTSELECT
+control => led_out2.OUTPUTSELECT
+control => led_out3.OUTPUTSELECT
+led_out <= led_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+led_out2 <= led_out2~reg0.DB_MAX_OUTPUT_PORT_TYPE
+led_out3 <= led_out3~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Motor|One_delay:inst1
-d => q~reg0.DATAIN
-q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-aclear => q~reg0.ACLR
-clk => q~reg0.CLK
+|motor|led_controller:inst6
+clk => led_out3~reg0.CLK
+clk => led_out2~reg0.CLK
+clk => led_out~reg0.CLK
+control => led_out.OUTPUTSELECT
+control => led_out2.OUTPUTSELECT
+control => led_out3.OUTPUTSELECT
+control => led_out.OUTPUTSELECT
+control => led_out2.OUTPUTSELECT
+control => led_out3.OUTPUTSELECT
+led_out <= led_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+led_out2 <= led_out2~reg0.DB_MAX_OUTPUT_PORT_TYPE
+led_out3 <= led_out3~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 

@@ -27,7 +27,7 @@ begin
 				led_in0 <= '1';
 				in1 <= '0';
 				led_in1 <= '0';
-			else 
+			elsif (selectRot = '1') then  
 				in1 <= '1';
 				led_in1 <= '1';
 				led_in0 <= '0';

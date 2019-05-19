@@ -2,52 +2,76 @@
 TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Slow Model Setup 'Controlador_e:inst|en_count'
-Slack : -4.269
-TNS   : -4.269
+Type  : Slow 1200mV 85C Model Setup 'Controlador_e:inst|en_count'
+Slack : -4.944
+TNS   : -4.944
 
-Type  : Slow Model Setup 'clk'
-Slack : -0.997
-TNS   : -11.191
+Type  : Slow 1200mV 85C Model Setup 'clk'
+Slack : -2.347
+TNS   : -36.778
 
-Type  : Slow Model Hold 'clk'
-Slack : -1.479
-TNS   : -13.198
+Type  : Slow 1200mV 85C Model Hold 'clk'
+Slack : -0.238
+TNS   : -0.238
 
-Type  : Slow Model Hold 'Controlador_e:inst|en_count'
-Slack : 3.623
+Type  : Slow 1200mV 85C Model Hold 'Controlador_e:inst|en_count'
+Slack : 3.468
 TNS   : 0.000
 
-Type  : Slow Model Minimum Pulse Width 'clk'
-Slack : -1.222
-TNS   : -18.222
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -46.123
 
-Type  : Slow Model Minimum Pulse Width 'Controlador_e:inst|en_count'
-Slack : 0.500
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'Controlador_e:inst|en_count'
+Slack : 0.471
 TNS   : 0.000
 
-Type  : Fast Model Setup 'Controlador_e:inst|en_count'
-Slack : -2.012
-TNS   : -2.012
+Type  : Slow 1200mV 0C Model Setup 'Controlador_e:inst|en_count'
+Slack : -4.543
+TNS   : -4.543
 
-Type  : Fast Model Setup 'clk'
-Slack : 0.100
+Type  : Slow 1200mV 0C Model Setup 'clk'
+Slack : -2.126
+TNS   : -31.880
+
+Type  : Slow 1200mV 0C Model Hold 'clk'
+Slack : -0.114
+TNS   : -0.114
+
+Type  : Slow 1200mV 0C Model Hold 'Controlador_e:inst|en_count'
+Slack : 3.273
 TNS   : 0.000
 
-Type  : Fast Model Hold 'clk'
-Slack : -1.070
-TNS   : -9.206
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -46.123
 
-Type  : Fast Model Hold 'Controlador_e:inst|en_count'
-Slack : 2.337
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'Controlador_e:inst|en_count'
+Slack : 0.476
 TNS   : 0.000
 
-Type  : Fast Model Minimum Pulse Width 'clk'
-Slack : -1.222
-TNS   : -18.222
+Type  : Fast 1200mV 0C Model Setup 'Controlador_e:inst|en_count'
+Slack : -1.888
+TNS   : -1.888
 
-Type  : Fast Model Minimum Pulse Width 'Controlador_e:inst|en_count'
-Slack : 0.500
+Type  : Fast 1200mV 0C Model Setup 'clk'
+Slack : -0.430
+TNS   : -2.180
+
+Type  : Fast 1200mV 0C Model Hold 'clk'
+Slack : -0.251
+TNS   : -1.293
+
+Type  : Fast 1200mV 0C Model Hold 'Controlador_e:inst|en_count'
+Slack : 1.776
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -33.874
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'Controlador_e:inst|en_count'
+Slack : 0.447
 TNS   : 0.000
 
 ------------------------------------------------------------

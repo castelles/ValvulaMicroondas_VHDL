@@ -103,7 +103,7 @@ END SYN;
 -- Retrieval info: PRIVATE: Direction NUMERIC "0"
 -- Retrieval info: PRIVATE: INTENDED_DEVICE_FAMILY STRING "Cyclone IV E"
 -- Retrieval info: PRIVATE: ModulusCounter NUMERIC "0"
--- Retrieval info: PRIVATE: ModulusValue NUMERIC "30000"
+-- Retrieval info: PRIVATE: ModulusValue NUMERIC "0"
 -- Retrieval info: PRIVATE: SCLR NUMERIC "0"
 -- Retrieval info: PRIVATE: SLOAD NUMERIC "0"
 -- Retrieval info: PRIVATE: SSET NUMERIC "0"
@@ -125,6 +125,6 @@ END SYN;
 -- Retrieval info: GEN_FILE: TYPE_NORMAL lpm_counter0.vhd TRUE
 -- Retrieval info: GEN_FILE: TYPE_NORMAL lpm_counter0.inc FALSE
 -- Retrieval info: GEN_FILE: TYPE_NORMAL lpm_counter0.cmp TRUE
--- Retrieval info: GEN_FILE: TYPE_NORMAL lpm_counter0.bsf TRUE
+-- Retrieval info: GEN_FILE: TYPE_NORMAL lpm_counter0.bsf TRUE FALSE
 -- Retrieval info: GEN_FILE: TYPE_NORMAL lpm_counter0_inst.vhd FALSE
 -- Retrieval info: LIB_FILE: lpm

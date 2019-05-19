@@ -11,7 +11,7 @@ entity Controlador_e is
 			rt				: out std_logic;
 			load   		: out std_logic;
 			en_count		: out std_logic;
-			speed_low   : out std_logic_vector(7 downto 0) := "00001100";
+			speed_low   : out std_logic_vector(7 downto 0) := "01100110";
 			speed_high  : out std_logic_vector(7 downto 0) := "11111111";
 			led_enable  : out std_logic := '0'
 		 );
