@@ -1,6 +1,6 @@
 Fitter report for motor
-Sun May 19 17:00:00 2019
-Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+Mon May 27 16:33:41 2019
+Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
 ---------------------
@@ -68,8 +68,8 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                       ;
 +------------------------------------+-------------------------------------------------+
-; Fitter Status                      ; Successful - Sun May 19 17:00:00 2019           ;
-; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Fitter Status                      ; Successful - Mon May 27 16:33:41 2019           ;
+; Quartus II 32-bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; motor                                           ;
 ; Top-level Entity Name              ; motor                                           ;
 ; Family                             ; Cyclone IV E                                    ;
@@ -219,7 +219,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in C:/Users/Admin/Desktop/motor/output_files/motor.pin.
+The pin-out file can be found in Z:/Users/caiotelles/Google Drive/Universidade/Eletrônica Digital II/Motor_doc/Motor_labDigital_II/Motor/output_files/motor.pin.
 
 
 +--------------------------------------------------------------------+
@@ -570,24 +570,24 @@ The pin-out file can be found in C:/Users/Admin/Desktop/motor/output_files/motor
 Note: Pin directions (input, output or bidir) are based on device operating in user mode.
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Fitter Resource Utilization by Entity                                                                                                                                                                                                                                                                                                           ;
-+-------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+--------------------------------------------------------------------------------------+--------------+
-; Compilation Hierarchy Node                ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                                                                  ; Library Name ;
-+-------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+--------------------------------------------------------------------------------------+--------------+
-; |motor                                    ; 55 (0)      ; 29 (0)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 19   ; 0            ; 26 (0)       ; 4 (0)             ; 25 (0)           ; |motor                                                                               ; work         ;
-;    |Comparador_e:inst4|                   ; 6 (6)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 4 (4)        ; 0 (0)             ; 2 (2)            ; |motor|Comparador_e:inst4                                                            ; work         ;
-;    |Controlador_e:inst|                   ; 28 (28)     ; 8 (8)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 20 (20)      ; 0 (0)             ; 8 (8)            ; |motor|Controlador_e:inst                                                            ; work         ;
-;    |demux_rotation:inst3|                 ; 2 (2)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; |motor|demux_rotation:inst3                                                          ; work         ;
-;    |dsf_shiftregister:inst2|              ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |motor|dsf_shiftregister:inst2                                                       ; work         ;
-;    |led_controller:inst5|                 ; 3 (3)       ; 3 (3)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 3 (3)            ; |motor|led_controller:inst5                                                          ; work         ;
-;    |led_controller:inst6|                 ; 3 (3)       ; 3 (3)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 2 (2)            ; |motor|led_controller:inst6                                                          ; work         ;
-;    |led_controller:inst7|                 ; 3 (3)       ; 3 (3)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 3 (3)            ; |motor|led_controller:inst7                                                          ; work         ;
-;    |led_controller:inst8|                 ; 3 (3)       ; 3 (3)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 3 (3)             ; 0 (0)            ; |motor|led_controller:inst8                                                          ; work         ;
-;    |lpm_counter0:inst10|                  ; 8 (0)       ; 8 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 8 (0)            ; |motor|lpm_counter0:inst10                                                           ; work         ;
-;       |lpm_counter:LPM_COUNTER_component| ; 8 (0)       ; 8 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 8 (0)            ; |motor|lpm_counter0:inst10|lpm_counter:LPM_COUNTER_component                         ; work         ;
-;          |cntr_5ei:auto_generated|        ; 8 (8)       ; 8 (8)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 8 (8)            ; |motor|lpm_counter0:inst10|lpm_counter:LPM_COUNTER_component|cntr_5ei:auto_generated ; work         ;
-+-------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+--------------------------------------------------------------------------------------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fitter Resource Utilization by Entity                                                                                                                                                                                                                                                                                                               ;
++-------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                                                                      ; Library Name ;
++-------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------------------------------------------------------------------------------------+--------------+
+; |motor                                    ; 55 (0)      ; 29 (0)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 19   ; 0            ; 26 (0)       ; 4 (0)             ; 25 (0)           ; |motor                                                                                   ; work         ;
+;    |Comparador_e:b2v_inst4|               ; 6 (6)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 4 (4)        ; 0 (0)             ; 2 (2)            ; |motor|Comparador_e:b2v_inst4                                                            ; work         ;
+;    |Controlador_e:b2v_inst|               ; 28 (28)     ; 8 (8)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 20 (20)      ; 0 (0)             ; 8 (8)            ; |motor|Controlador_e:b2v_inst                                                            ; work         ;
+;    |demux_rotation:b2v_inst3|             ; 2 (2)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; |motor|demux_rotation:b2v_inst3                                                          ; work         ;
+;    |dsf_shiftregister:b2v_inst2|          ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |motor|dsf_shiftregister:b2v_inst2                                                       ; work         ;
+;    |led_controller:b2v_inst5|             ; 3 (3)       ; 3 (3)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 3 (3)            ; |motor|led_controller:b2v_inst5                                                          ; work         ;
+;    |led_controller:b2v_inst6|             ; 3 (3)       ; 3 (3)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 2 (2)            ; |motor|led_controller:b2v_inst6                                                          ; work         ;
+;    |led_controller:b2v_inst7|             ; 3 (3)       ; 3 (3)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 3 (3)            ; |motor|led_controller:b2v_inst7                                                          ; work         ;
+;    |led_controller:b2v_inst8|             ; 3 (3)       ; 3 (3)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 3 (3)             ; 0 (0)            ; |motor|led_controller:b2v_inst8                                                          ; work         ;
+;    |lpm_counter0:b2v_inst10|              ; 8 (0)       ; 8 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 8 (0)            ; |motor|lpm_counter0:b2v_inst10                                                           ; work         ;
+;       |lpm_counter:LPM_COUNTER_component| ; 8 (0)       ; 8 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 8 (0)            ; |motor|lpm_counter0:b2v_inst10|lpm_counter:LPM_COUNTER_component                         ; work         ;
+;          |cntr_5ei:auto_generated|        ; 8 (8)       ; 8 (8)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 8 (8)            ; |motor|lpm_counter0:b2v_inst10|lpm_counter:LPM_COUNTER_component|cntr_5ei:auto_generated ; work         ;
++-------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -618,64 +618,64 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------+----------+---------------+---------------+-----------------------+-----+------+
 
 
-+-----------------------------------------------------------------------------+
-; Pad To Core Delay Chain Fanout                                              ;
-+-----------------------------------------------+-------------------+---------+
-; Source Pin / Fanout                           ; Pad To Core Index ; Setting ;
-+-----------------------------------------------+-------------------+---------+
-; clk                                           ;                   ;         ;
-; enable                                        ;                   ;         ;
-;      - Controlador_e:inst|rt                  ; 0                 ; 6       ;
-;      - Controlador_e:inst|en_count            ; 0                 ; 6       ;
-;      - Controlador_e:inst|Selector1~0         ; 0                 ; 6       ;
-;      - Controlador_e:inst|Selector1~2         ; 0                 ; 6       ;
-;      - Controlador_e:inst|Selector5~0         ; 0                 ; 6       ;
-;      - Controlador_e:inst|process_0~0         ; 0                 ; 6       ;
-;      - Controlador_e:inst|en_count~0          ; 0                 ; 6       ;
-;      - Controlador_e:inst|state_controller~12 ; 0                 ; 6       ;
-;      - Controlador_e:inst|load                ; 0                 ; 6       ;
-;      - Controlador_e:inst|Selector4~4         ; 0                 ; 6       ;
-;      - Controlador_e:inst|Selector5~1         ; 0                 ; 6       ;
-;      - Controlador_e:inst|Selector6~1         ; 0                 ; 6       ;
-; key_remote                                    ;                   ;         ;
-;      - Controlador_e:inst|Selector1~0         ; 0                 ; 6       ;
-;      - Controlador_e:inst|Selector1~1         ; 0                 ; 6       ;
-;      - Controlador_e:inst|Selector1~2         ; 0                 ; 6       ;
-;      - Controlador_e:inst|Selector5~0         ; 0                 ; 6       ;
-;      - Controlador_e:inst|process_0~0         ; 0                 ; 6       ;
-;      - Controlador_e:inst|en_count~0          ; 0                 ; 6       ;
-;      - Controlador_e:inst|state_controller~12 ; 0                 ; 6       ;
-;      - Controlador_e:inst|Selector4~1         ; 0                 ; 6       ;
-;      - Controlador_e:inst|Selector4~4         ; 0                 ; 6       ;
-;      - Controlador_e:inst|Selector5~1         ; 0                 ; 6       ;
-;      - Controlador_e:inst|Selector6~1         ; 0                 ; 6       ;
-;      - Controlador_e:inst|Selector2~1         ; 0                 ; 6       ;
-; key_local                                     ;                   ;         ;
-;      - Controlador_e:inst|Selector1~0         ; 0                 ; 6       ;
-;      - Controlador_e:inst|Selector1~1         ; 0                 ; 6       ;
-;      - Controlador_e:inst|Selector1~2         ; 0                 ; 6       ;
-;      - Controlador_e:inst|Selector5~0         ; 0                 ; 6       ;
-;      - Controlador_e:inst|process_0~0         ; 0                 ; 6       ;
-;      - Controlador_e:inst|en_count~0          ; 0                 ; 6       ;
-;      - Controlador_e:inst|state_controller~12 ; 0                 ; 6       ;
-;      - Controlador_e:inst|Selector4~1         ; 0                 ; 6       ;
-;      - Controlador_e:inst|Selector4~4         ; 0                 ; 6       ;
-;      - Controlador_e:inst|Selector5~1         ; 0                 ; 6       ;
-;      - Controlador_e:inst|Selector6~1         ; 0                 ; 6       ;
-;      - Controlador_e:inst|Selector2~1         ; 0                 ; 6       ;
-+-----------------------------------------------+-------------------+---------+
++---------------------------------------------------------------------------------+
+; Pad To Core Delay Chain Fanout                                                  ;
++---------------------------------------------------+-------------------+---------+
+; Source Pin / Fanout                               ; Pad To Core Index ; Setting ;
++---------------------------------------------------+-------------------+---------+
+; clk                                               ;                   ;         ;
+; enable                                            ;                   ;         ;
+;      - Controlador_e:b2v_inst|rt                  ; 0                 ; 6       ;
+;      - Controlador_e:b2v_inst|en_count            ; 0                 ; 6       ;
+;      - Controlador_e:b2v_inst|Selector1~0         ; 0                 ; 6       ;
+;      - Controlador_e:b2v_inst|Selector1~2         ; 0                 ; 6       ;
+;      - Controlador_e:b2v_inst|Selector5~0         ; 0                 ; 6       ;
+;      - Controlador_e:b2v_inst|process_0~0         ; 0                 ; 6       ;
+;      - Controlador_e:b2v_inst|en_count~0          ; 0                 ; 6       ;
+;      - Controlador_e:b2v_inst|state_controller~12 ; 0                 ; 6       ;
+;      - Controlador_e:b2v_inst|load                ; 0                 ; 6       ;
+;      - Controlador_e:b2v_inst|Selector4~4         ; 0                 ; 6       ;
+;      - Controlador_e:b2v_inst|Selector5~1         ; 0                 ; 6       ;
+;      - Controlador_e:b2v_inst|Selector6~1         ; 0                 ; 6       ;
+; key_remote                                        ;                   ;         ;
+;      - Controlador_e:b2v_inst|Selector1~0         ; 0                 ; 6       ;
+;      - Controlador_e:b2v_inst|Selector1~1         ; 0                 ; 6       ;
+;      - Controlador_e:b2v_inst|Selector1~2         ; 0                 ; 6       ;
+;      - Controlador_e:b2v_inst|Selector5~0         ; 0                 ; 6       ;
+;      - Controlador_e:b2v_inst|process_0~0         ; 0                 ; 6       ;
+;      - Controlador_e:b2v_inst|en_count~0          ; 0                 ; 6       ;
+;      - Controlador_e:b2v_inst|state_controller~12 ; 0                 ; 6       ;
+;      - Controlador_e:b2v_inst|Selector4~1         ; 0                 ; 6       ;
+;      - Controlador_e:b2v_inst|Selector4~4         ; 0                 ; 6       ;
+;      - Controlador_e:b2v_inst|Selector5~1         ; 0                 ; 6       ;
+;      - Controlador_e:b2v_inst|Selector6~1         ; 0                 ; 6       ;
+;      - Controlador_e:b2v_inst|Selector2~1         ; 0                 ; 6       ;
+; key_local                                         ;                   ;         ;
+;      - Controlador_e:b2v_inst|Selector1~0         ; 0                 ; 6       ;
+;      - Controlador_e:b2v_inst|Selector1~1         ; 0                 ; 6       ;
+;      - Controlador_e:b2v_inst|Selector1~2         ; 0                 ; 6       ;
+;      - Controlador_e:b2v_inst|Selector5~0         ; 0                 ; 6       ;
+;      - Controlador_e:b2v_inst|process_0~0         ; 0                 ; 6       ;
+;      - Controlador_e:b2v_inst|en_count~0          ; 0                 ; 6       ;
+;      - Controlador_e:b2v_inst|state_controller~12 ; 0                 ; 6       ;
+;      - Controlador_e:b2v_inst|Selector4~1         ; 0                 ; 6       ;
+;      - Controlador_e:b2v_inst|Selector4~4         ; 0                 ; 6       ;
+;      - Controlador_e:b2v_inst|Selector5~1         ; 0                 ; 6       ;
+;      - Controlador_e:b2v_inst|Selector6~1         ; 0                 ; 6       ;
+;      - Controlador_e:b2v_inst|Selector2~1         ; 0                 ; 6       ;
++---------------------------------------------------+-------------------+---------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Control Signals                                                                                                                                                  ;
-+-----------------------------+--------------+---------+----------------------------+--------+----------------------+------------------+---------------------------+
-; Name                        ; Location     ; Fan-Out ; Usage                      ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+-----------------------------+--------------+---------+----------------------------+--------+----------------------+------------------+---------------------------+
-; Controlador_e:inst|en_count ; FF_X30_Y1_N7 ; 14      ; Clock enable, Latch enable ; no     ; --                   ; --               ; --                        ;
-; clk                         ; PIN_23       ; 29      ; Clock                      ; yes    ; Global Clock         ; GCLK2            ; --                        ;
-; enable                      ; PIN_68       ; 13      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; enable                      ; PIN_68       ; 5       ; Async. clear               ; yes    ; Global Clock         ; GCLK9            ; --                        ;
-+-----------------------------+--------------+---------+----------------------------+--------+----------------------+------------------+---------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Control Signals                                                                                                                                                      ;
++---------------------------------+--------------+---------+----------------------------+--------+----------------------+------------------+---------------------------+
+; Name                            ; Location     ; Fan-Out ; Usage                      ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++---------------------------------+--------------+---------+----------------------------+--------+----------------------+------------------+---------------------------+
+; Controlador_e:b2v_inst|en_count ; FF_X30_Y1_N7 ; 14      ; Clock enable, Latch enable ; no     ; --                   ; --               ; --                        ;
+; clk                             ; PIN_23       ; 29      ; Clock                      ; yes    ; Global Clock         ; GCLK2            ; --                        ;
+; enable                          ; PIN_68       ; 13      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; enable                          ; PIN_68       ; 5       ; Async. clear               ; yes    ; Global Clock         ; GCLK9            ; --                        ;
++---------------------------------+--------------+---------+----------------------------+--------+----------------------+------------------+---------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------+
@@ -688,102 +688,102 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------+----------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------+
-; Non-Global High Fan-Out Signals                                                                                 ;
-+-------------------------------------------------------------------------------------------------------+---------+
-; Name                                                                                                  ; Fan-Out ;
-+-------------------------------------------------------------------------------------------------------+---------+
-; Controlador_e:inst|en_count                                                                           ; 14      ;
-; key_local~input                                                                                       ; 12      ;
-; key_remote~input                                                                                      ; 12      ;
-; enable~input                                                                                          ; 12      ;
-; Controlador_e:inst|state_controller.set_speed                                                         ; 8       ;
-; Controlador_e:inst|state_controller.power_engine                                                      ; 8       ;
-; Controlador_e:inst|state_controller.hold                                                              ; 7       ;
-; Controlador_e:inst|state_controller.standby                                                           ; 7       ;
-; Controlador_e:inst|rt                                                                                 ; 6       ;
-; Controlador_e:inst|Selector5~1                                                                        ; 5       ;
-; Controlador_e:inst|process_0~0                                                                        ; 5       ;
-; dsf_shiftregister:inst2|speed_register[0]                                                             ; 5       ;
-; Controlador_e:inst|load                                                                               ; 4       ;
-; Controlador_e:inst|led_enable                                                                         ; 4       ;
-; demux_rotation:inst3|in1~0                                                                            ; 4       ;
-; demux_rotation:inst3|in0~0                                                                            ; 4       ;
-; Controlador_e:inst|Selector4~4                                                                        ; 3       ;
-; Comparador_e:inst4|led_ls~0                                                                           ; 3       ;
-; Comparador_e:inst4|ls                                                                                 ; 2       ;
-; Controlador_e:inst|Selector6~1                                                                        ; 2       ;
-; Controlador_e:inst|state_controller~12                                                                ; 2       ;
-; Controlador_e:inst|Selector5~0                                                                        ; 2       ;
-; Comparador_e:inst4|LessThan0~3                                                                        ; 2       ;
-; lpm_counter0:inst10|lpm_counter:LPM_COUNTER_component|cntr_5ei:auto_generated|counter_reg_bit[3]      ; 2       ;
-; lpm_counter0:inst10|lpm_counter:LPM_COUNTER_component|cntr_5ei:auto_generated|counter_reg_bit[4]      ; 2       ;
-; lpm_counter0:inst10|lpm_counter:LPM_COUNTER_component|cntr_5ei:auto_generated|counter_reg_bit[1]      ; 2       ;
-; lpm_counter0:inst10|lpm_counter:LPM_COUNTER_component|cntr_5ei:auto_generated|counter_reg_bit[2]      ; 2       ;
-; lpm_counter0:inst10|lpm_counter:LPM_COUNTER_component|cntr_5ei:auto_generated|counter_reg_bit[0]      ; 2       ;
-; lpm_counter0:inst10|lpm_counter:LPM_COUNTER_component|cntr_5ei:auto_generated|counter_reg_bit[5]      ; 2       ;
-; lpm_counter0:inst10|lpm_counter:LPM_COUNTER_component|cntr_5ei:auto_generated|counter_reg_bit[6]      ; 2       ;
-; lpm_counter0:inst10|lpm_counter:LPM_COUNTER_component|cntr_5ei:auto_generated|counter_reg_bit[7]      ; 2       ;
-; led_controller:inst7|led_out~0                                                                        ; 1       ;
-; led_controller:inst7|led_out2~0                                                                       ; 1       ;
-; led_controller:inst7|led_out3~0                                                                       ; 1       ;
-; led_controller:inst5|led_out3~0                                                                       ; 1       ;
-; led_controller:inst5|led_out2~0                                                                       ; 1       ;
-; led_controller:inst5|led_out~0                                                                        ; 1       ;
-; Controlador_e:inst|Selector7~3                                                                        ; 1       ;
-; Controlador_e:inst|Selector2~2                                                                        ; 1       ;
-; Controlador_e:inst|Selector2~1                                                                        ; 1       ;
-; Controlador_e:inst|Selector2~0                                                                        ; 1       ;
-; Controlador_e:inst|Selector7~2                                                                        ; 1       ;
-; Controlador_e:inst|Selector8~0                                                                        ; 1       ;
-; Controlador_e:inst|Selector6~3                                                                        ; 1       ;
-; Controlador_e:inst|Selector6~2                                                                        ; 1       ;
-; Controlador_e:inst|Selector6~0                                                                        ; 1       ;
-; Controlador_e:inst|Selector5~2                                                                        ; 1       ;
-; dsf_shiftregister:inst2|speed_register[0]~0                                                           ; 1       ;
-; Controlador_e:inst|Selector4~3                                                                        ; 1       ;
-; Controlador_e:inst|Selector4~2                                                                        ; 1       ;
-; Controlador_e:inst|Selector4~1                                                                        ; 1       ;
-; Controlador_e:inst|Selector4~0                                                                        ; 1       ;
-; Controlador_e:inst|Selector3~1                                                                        ; 1       ;
-; Controlador_e:inst|en_count~0                                                                         ; 1       ;
-; Controlador_e:inst|Selector3~0                                                                        ; 1       ;
-; Controlador_e:inst|Selector1~4                                                                        ; 1       ;
-; Controlador_e:inst|Selector1~3                                                                        ; 1       ;
-; Controlador_e:inst|Selector1~2                                                                        ; 1       ;
-; Controlador_e:inst|Selector1~1                                                                        ; 1       ;
-; Controlador_e:inst|Selector1~0                                                                        ; 1       ;
-; Comparador_e:inst4|LessThan0~2                                                                        ; 1       ;
-; Comparador_e:inst4|LessThan0~1                                                                        ; 1       ;
-; Comparador_e:inst4|LessThan0~0                                                                        ; 1       ;
-; led_controller:inst6|led_out                                                                          ; 1       ;
-; led_controller:inst6|led_out2                                                                         ; 1       ;
-; led_controller:inst6|led_out3                                                                         ; 1       ;
-; led_controller:inst7|led_out                                                                          ; 1       ;
-; led_controller:inst7|led_out2                                                                         ; 1       ;
-; led_controller:inst7|led_out3                                                                         ; 1       ;
-; led_controller:inst8|led_out3                                                                         ; 1       ;
-; led_controller:inst8|led_out2                                                                         ; 1       ;
-; led_controller:inst8|led_out                                                                          ; 1       ;
-; led_controller:inst5|led_out3                                                                         ; 1       ;
-; led_controller:inst5|led_out2                                                                         ; 1       ;
-; led_controller:inst5|led_out                                                                          ; 1       ;
-; lpm_counter0:inst10|lpm_counter:LPM_COUNTER_component|cntr_5ei:auto_generated|counter_comb_bita7      ; 1       ;
-; lpm_counter0:inst10|lpm_counter:LPM_COUNTER_component|cntr_5ei:auto_generated|counter_comb_bita6~COUT ; 1       ;
-; lpm_counter0:inst10|lpm_counter:LPM_COUNTER_component|cntr_5ei:auto_generated|counter_comb_bita6      ; 1       ;
-; lpm_counter0:inst10|lpm_counter:LPM_COUNTER_component|cntr_5ei:auto_generated|counter_comb_bita5~COUT ; 1       ;
-; lpm_counter0:inst10|lpm_counter:LPM_COUNTER_component|cntr_5ei:auto_generated|counter_comb_bita5      ; 1       ;
-; lpm_counter0:inst10|lpm_counter:LPM_COUNTER_component|cntr_5ei:auto_generated|counter_comb_bita4~COUT ; 1       ;
-; lpm_counter0:inst10|lpm_counter:LPM_COUNTER_component|cntr_5ei:auto_generated|counter_comb_bita4      ; 1       ;
-; lpm_counter0:inst10|lpm_counter:LPM_COUNTER_component|cntr_5ei:auto_generated|counter_comb_bita3~COUT ; 1       ;
-; lpm_counter0:inst10|lpm_counter:LPM_COUNTER_component|cntr_5ei:auto_generated|counter_comb_bita3      ; 1       ;
-; lpm_counter0:inst10|lpm_counter:LPM_COUNTER_component|cntr_5ei:auto_generated|counter_comb_bita2~COUT ; 1       ;
-; lpm_counter0:inst10|lpm_counter:LPM_COUNTER_component|cntr_5ei:auto_generated|counter_comb_bita2      ; 1       ;
-; lpm_counter0:inst10|lpm_counter:LPM_COUNTER_component|cntr_5ei:auto_generated|counter_comb_bita1~COUT ; 1       ;
-; lpm_counter0:inst10|lpm_counter:LPM_COUNTER_component|cntr_5ei:auto_generated|counter_comb_bita1      ; 1       ;
-; lpm_counter0:inst10|lpm_counter:LPM_COUNTER_component|cntr_5ei:auto_generated|counter_comb_bita0~COUT ; 1       ;
-; lpm_counter0:inst10|lpm_counter:LPM_COUNTER_component|cntr_5ei:auto_generated|counter_comb_bita0      ; 1       ;
-+-------------------------------------------------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------+
+; Non-Global High Fan-Out Signals                                                                                     ;
++-----------------------------------------------------------------------------------------------------------+---------+
+; Name                                                                                                      ; Fan-Out ;
++-----------------------------------------------------------------------------------------------------------+---------+
+; Controlador_e:b2v_inst|en_count                                                                           ; 14      ;
+; key_local~input                                                                                           ; 12      ;
+; key_remote~input                                                                                          ; 12      ;
+; enable~input                                                                                              ; 12      ;
+; Controlador_e:b2v_inst|state_controller.set_speed                                                         ; 8       ;
+; Controlador_e:b2v_inst|state_controller.power_engine                                                      ; 8       ;
+; Controlador_e:b2v_inst|state_controller.hold                                                              ; 7       ;
+; Controlador_e:b2v_inst|state_controller.standby                                                           ; 7       ;
+; Controlador_e:b2v_inst|rt                                                                                 ; 6       ;
+; Controlador_e:b2v_inst|Selector5~1                                                                        ; 5       ;
+; Controlador_e:b2v_inst|process_0~0                                                                        ; 5       ;
+; dsf_shiftregister:b2v_inst2|speed_register[0]                                                             ; 5       ;
+; Controlador_e:b2v_inst|load                                                                               ; 4       ;
+; Controlador_e:b2v_inst|led_enable                                                                         ; 4       ;
+; demux_rotation:b2v_inst3|in1~0                                                                            ; 4       ;
+; demux_rotation:b2v_inst3|in0~0                                                                            ; 4       ;
+; Controlador_e:b2v_inst|Selector4~4                                                                        ; 3       ;
+; Comparador_e:b2v_inst4|led_ls~0                                                                           ; 3       ;
+; Comparador_e:b2v_inst4|ls                                                                                 ; 2       ;
+; Controlador_e:b2v_inst|Selector6~1                                                                        ; 2       ;
+; Controlador_e:b2v_inst|state_controller~12                                                                ; 2       ;
+; Controlador_e:b2v_inst|Selector5~0                                                                        ; 2       ;
+; Comparador_e:b2v_inst4|LessThan0~3                                                                        ; 2       ;
+; lpm_counter0:b2v_inst10|lpm_counter:LPM_COUNTER_component|cntr_5ei:auto_generated|counter_reg_bit[3]      ; 2       ;
+; lpm_counter0:b2v_inst10|lpm_counter:LPM_COUNTER_component|cntr_5ei:auto_generated|counter_reg_bit[4]      ; 2       ;
+; lpm_counter0:b2v_inst10|lpm_counter:LPM_COUNTER_component|cntr_5ei:auto_generated|counter_reg_bit[1]      ; 2       ;
+; lpm_counter0:b2v_inst10|lpm_counter:LPM_COUNTER_component|cntr_5ei:auto_generated|counter_reg_bit[2]      ; 2       ;
+; lpm_counter0:b2v_inst10|lpm_counter:LPM_COUNTER_component|cntr_5ei:auto_generated|counter_reg_bit[0]      ; 2       ;
+; lpm_counter0:b2v_inst10|lpm_counter:LPM_COUNTER_component|cntr_5ei:auto_generated|counter_reg_bit[5]      ; 2       ;
+; lpm_counter0:b2v_inst10|lpm_counter:LPM_COUNTER_component|cntr_5ei:auto_generated|counter_reg_bit[6]      ; 2       ;
+; lpm_counter0:b2v_inst10|lpm_counter:LPM_COUNTER_component|cntr_5ei:auto_generated|counter_reg_bit[7]      ; 2       ;
+; led_controller:b2v_inst7|led_out~0                                                                        ; 1       ;
+; led_controller:b2v_inst7|led_out2~0                                                                       ; 1       ;
+; led_controller:b2v_inst7|led_out3~0                                                                       ; 1       ;
+; led_controller:b2v_inst5|led_out3~0                                                                       ; 1       ;
+; led_controller:b2v_inst5|led_out2~0                                                                       ; 1       ;
+; led_controller:b2v_inst5|led_out~0                                                                        ; 1       ;
+; Controlador_e:b2v_inst|Selector7~3                                                                        ; 1       ;
+; Controlador_e:b2v_inst|Selector2~2                                                                        ; 1       ;
+; Controlador_e:b2v_inst|Selector2~1                                                                        ; 1       ;
+; Controlador_e:b2v_inst|Selector2~0                                                                        ; 1       ;
+; Controlador_e:b2v_inst|Selector7~2                                                                        ; 1       ;
+; Controlador_e:b2v_inst|Selector8~0                                                                        ; 1       ;
+; Controlador_e:b2v_inst|Selector6~3                                                                        ; 1       ;
+; Controlador_e:b2v_inst|Selector6~2                                                                        ; 1       ;
+; Controlador_e:b2v_inst|Selector6~0                                                                        ; 1       ;
+; Controlador_e:b2v_inst|Selector5~2                                                                        ; 1       ;
+; dsf_shiftregister:b2v_inst2|speed_register[0]~0                                                           ; 1       ;
+; Controlador_e:b2v_inst|Selector4~3                                                                        ; 1       ;
+; Controlador_e:b2v_inst|Selector4~2                                                                        ; 1       ;
+; Controlador_e:b2v_inst|Selector4~1                                                                        ; 1       ;
+; Controlador_e:b2v_inst|Selector4~0                                                                        ; 1       ;
+; Controlador_e:b2v_inst|Selector3~1                                                                        ; 1       ;
+; Controlador_e:b2v_inst|en_count~0                                                                         ; 1       ;
+; Controlador_e:b2v_inst|Selector3~0                                                                        ; 1       ;
+; Controlador_e:b2v_inst|Selector1~4                                                                        ; 1       ;
+; Controlador_e:b2v_inst|Selector1~3                                                                        ; 1       ;
+; Controlador_e:b2v_inst|Selector1~2                                                                        ; 1       ;
+; Controlador_e:b2v_inst|Selector1~1                                                                        ; 1       ;
+; Controlador_e:b2v_inst|Selector1~0                                                                        ; 1       ;
+; Comparador_e:b2v_inst4|LessThan0~2                                                                        ; 1       ;
+; Comparador_e:b2v_inst4|LessThan0~1                                                                        ; 1       ;
+; Comparador_e:b2v_inst4|LessThan0~0                                                                        ; 1       ;
+; led_controller:b2v_inst6|led_out                                                                          ; 1       ;
+; led_controller:b2v_inst6|led_out2                                                                         ; 1       ;
+; led_controller:b2v_inst6|led_out3                                                                         ; 1       ;
+; led_controller:b2v_inst7|led_out                                                                          ; 1       ;
+; led_controller:b2v_inst7|led_out2                                                                         ; 1       ;
+; led_controller:b2v_inst7|led_out3                                                                         ; 1       ;
+; led_controller:b2v_inst8|led_out3                                                                         ; 1       ;
+; led_controller:b2v_inst8|led_out2                                                                         ; 1       ;
+; led_controller:b2v_inst8|led_out                                                                          ; 1       ;
+; led_controller:b2v_inst5|led_out3                                                                         ; 1       ;
+; led_controller:b2v_inst5|led_out2                                                                         ; 1       ;
+; led_controller:b2v_inst5|led_out                                                                          ; 1       ;
+; lpm_counter0:b2v_inst10|lpm_counter:LPM_COUNTER_component|cntr_5ei:auto_generated|counter_comb_bita7      ; 1       ;
+; lpm_counter0:b2v_inst10|lpm_counter:LPM_COUNTER_component|cntr_5ei:auto_generated|counter_comb_bita6~COUT ; 1       ;
+; lpm_counter0:b2v_inst10|lpm_counter:LPM_COUNTER_component|cntr_5ei:auto_generated|counter_comb_bita6      ; 1       ;
+; lpm_counter0:b2v_inst10|lpm_counter:LPM_COUNTER_component|cntr_5ei:auto_generated|counter_comb_bita5~COUT ; 1       ;
+; lpm_counter0:b2v_inst10|lpm_counter:LPM_COUNTER_component|cntr_5ei:auto_generated|counter_comb_bita5      ; 1       ;
+; lpm_counter0:b2v_inst10|lpm_counter:LPM_COUNTER_component|cntr_5ei:auto_generated|counter_comb_bita4~COUT ; 1       ;
+; lpm_counter0:b2v_inst10|lpm_counter:LPM_COUNTER_component|cntr_5ei:auto_generated|counter_comb_bita4      ; 1       ;
+; lpm_counter0:b2v_inst10|lpm_counter:LPM_COUNTER_component|cntr_5ei:auto_generated|counter_comb_bita3~COUT ; 1       ;
+; lpm_counter0:b2v_inst10|lpm_counter:LPM_COUNTER_component|cntr_5ei:auto_generated|counter_comb_bita3      ; 1       ;
+; lpm_counter0:b2v_inst10|lpm_counter:LPM_COUNTER_component|cntr_5ei:auto_generated|counter_comb_bita2~COUT ; 1       ;
+; lpm_counter0:b2v_inst10|lpm_counter:LPM_COUNTER_component|cntr_5ei:auto_generated|counter_comb_bita2      ; 1       ;
+; lpm_counter0:b2v_inst10|lpm_counter:LPM_COUNTER_component|cntr_5ei:auto_generated|counter_comb_bita1~COUT ; 1       ;
+; lpm_counter0:b2v_inst10|lpm_counter:LPM_COUNTER_component|cntr_5ei:auto_generated|counter_comb_bita1      ; 1       ;
+; lpm_counter0:b2v_inst10|lpm_counter:LPM_COUNTER_component|cntr_5ei:auto_generated|counter_comb_bita0~COUT ; 1       ;
+; lpm_counter0:b2v_inst10|lpm_counter:LPM_COUNTER_component|cntr_5ei:auto_generated|counter_comb_bita0      ; 1       ;
++-----------------------------------------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------+
@@ -791,14 +791,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------+-----------------------+
 ; Other Routing Resource Type ; Usage                 ;
 +-----------------------------+-----------------------+
-; Block interconnects         ; 50 / 32,401 ( < 1 % ) ;
+; Block interconnects         ; 48 / 32,401 ( < 1 % ) ;
 ; C16 interconnects           ; 0 / 1,326 ( 0 % )     ;
-; C4 interconnects            ; 22 / 21,816 ( < 1 % ) ;
-; Direct links                ; 14 / 32,401 ( < 1 % ) ;
+; C4 interconnects            ; 24 / 21,816 ( < 1 % ) ;
+; Direct links                ; 12 / 32,401 ( < 1 % ) ;
 ; Global clocks               ; 2 / 10 ( 20 % )       ;
-; Local interconnects         ; 36 / 10,320 ( < 1 % ) ;
+; Local interconnects         ; 37 / 10,320 ( < 1 % ) ;
 ; R24 interconnects           ; 2 / 1,289 ( < 1 % )   ;
-; R4 interconnects            ; 42 / 28,186 ( < 1 % ) ;
+; R4 interconnects            ; 41 / 28,186 ( < 1 % ) ;
 +-----------------------------+-----------------------+
 
 
@@ -829,10 +829,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------------------------------------------------+
 ; LAB-wide Signals                                                 ;
 +------------------------------------+-----------------------------+
-; LAB-wide Signals  (Average = 1.20) ; Number of LABs  (Total = 5) ;
+; LAB-wide Signals  (Average = 1.40) ; Number of LABs  (Total = 5) ;
 +------------------------------------+-----------------------------+
 ; 1 Async. clear                     ; 1                           ;
 ; 1 Clock                            ; 5                           ;
+; 1 Clock enable                     ; 1                           ;
 +------------------------------------+-----------------------------+
 
 
@@ -1042,27 +1043,27 @@ Note: For more information on problematic transfers, consider running the Fitter
 This will disable optimization of problematic paths and expose them for further analysis using either the TimeQuest Timing Analyzer or the Classic Timing Analyzer.
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------+
-; Estimated Delay Added for Hold Timing Details                                                                                                       ;
-+--------------------------------------------------------------------------------------------------+------------------------------+-------------------+
-; Source Register                                                                                  ; Destination Register         ; Delay Added in ns ;
-+--------------------------------------------------------------------------------------------------+------------------------------+-------------------+
-; Controlador_e:inst|en_count                                                                      ; Controlador_e:inst|en_count  ; 2.243             ;
-; key_remote                                                                                       ; Controlador_e:inst|en_count  ; 1.082             ;
-; key_local                                                                                        ; Controlador_e:inst|en_count  ; 1.082             ;
-; enable                                                                                           ; Controlador_e:inst|en_count  ; 1.082             ;
-; Controlador_e:inst|state_controller.power_engine                                                 ; Controlador_e:inst|en_count  ; 0.997             ;
-; Controlador_e:inst|rt                                                                            ; led_controller:inst7|led_out ; 0.989             ;
-; dsf_shiftregister:inst2|speed_register[0]                                                        ; led_controller:inst6|led_out ; 0.158             ;
-; lpm_counter0:inst10|lpm_counter:LPM_COUNTER_component|cntr_5ei:auto_generated|counter_reg_bit[7] ; led_controller:inst6|led_out ; 0.158             ;
-; lpm_counter0:inst10|lpm_counter:LPM_COUNTER_component|cntr_5ei:auto_generated|counter_reg_bit[6] ; led_controller:inst6|led_out ; 0.158             ;
-; lpm_counter0:inst10|lpm_counter:LPM_COUNTER_component|cntr_5ei:auto_generated|counter_reg_bit[5] ; led_controller:inst6|led_out ; 0.158             ;
-; lpm_counter0:inst10|lpm_counter:LPM_COUNTER_component|cntr_5ei:auto_generated|counter_reg_bit[4] ; led_controller:inst6|led_out ; 0.158             ;
-; lpm_counter0:inst10|lpm_counter:LPM_COUNTER_component|cntr_5ei:auto_generated|counter_reg_bit[3] ; led_controller:inst6|led_out ; 0.158             ;
-; lpm_counter0:inst10|lpm_counter:LPM_COUNTER_component|cntr_5ei:auto_generated|counter_reg_bit[2] ; led_controller:inst6|led_out ; 0.158             ;
-; lpm_counter0:inst10|lpm_counter:LPM_COUNTER_component|cntr_5ei:auto_generated|counter_reg_bit[1] ; led_controller:inst6|led_out ; 0.158             ;
-; lpm_counter0:inst10|lpm_counter:LPM_COUNTER_component|cntr_5ei:auto_generated|counter_reg_bit[0] ; led_controller:inst6|led_out ; 0.158             ;
-+--------------------------------------------------------------------------------------------------+------------------------------+-------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Estimated Delay Added for Hold Timing Details                                                                                                               ;
++------------------------------------------------------------------------------------------------------+----------------------------------+-------------------+
+; Source Register                                                                                      ; Destination Register             ; Delay Added in ns ;
++------------------------------------------------------------------------------------------------------+----------------------------------+-------------------+
+; Controlador_e:b2v_inst|en_count                                                                      ; Controlador_e:b2v_inst|en_count  ; 2.242             ;
+; key_remote                                                                                           ; Controlador_e:b2v_inst|en_count  ; 1.082             ;
+; key_local                                                                                            ; Controlador_e:b2v_inst|en_count  ; 1.082             ;
+; enable                                                                                               ; Controlador_e:b2v_inst|en_count  ; 1.082             ;
+; Controlador_e:b2v_inst|state_controller.power_engine                                                 ; Controlador_e:b2v_inst|en_count  ; 0.997             ;
+; Controlador_e:b2v_inst|rt                                                                            ; led_controller:b2v_inst7|led_out ; 0.989             ;
+; dsf_shiftregister:b2v_inst2|speed_register[0]                                                        ; led_controller:b2v_inst6|led_out ; 0.158             ;
+; lpm_counter0:b2v_inst10|lpm_counter:LPM_COUNTER_component|cntr_5ei:auto_generated|counter_reg_bit[7] ; led_controller:b2v_inst6|led_out ; 0.158             ;
+; lpm_counter0:b2v_inst10|lpm_counter:LPM_COUNTER_component|cntr_5ei:auto_generated|counter_reg_bit[6] ; led_controller:b2v_inst6|led_out ; 0.158             ;
+; lpm_counter0:b2v_inst10|lpm_counter:LPM_COUNTER_component|cntr_5ei:auto_generated|counter_reg_bit[5] ; led_controller:b2v_inst6|led_out ; 0.158             ;
+; lpm_counter0:b2v_inst10|lpm_counter:LPM_COUNTER_component|cntr_5ei:auto_generated|counter_reg_bit[4] ; led_controller:b2v_inst6|led_out ; 0.158             ;
+; lpm_counter0:b2v_inst10|lpm_counter:LPM_COUNTER_component|cntr_5ei:auto_generated|counter_reg_bit[3] ; led_controller:b2v_inst6|led_out ; 0.158             ;
+; lpm_counter0:b2v_inst10|lpm_counter:LPM_COUNTER_component|cntr_5ei:auto_generated|counter_reg_bit[2] ; led_controller:b2v_inst6|led_out ; 0.158             ;
+; lpm_counter0:b2v_inst10|lpm_counter:LPM_COUNTER_component|cntr_5ei:auto_generated|counter_reg_bit[1] ; led_controller:b2v_inst6|led_out ; 0.158             ;
+; lpm_counter0:b2v_inst10|lpm_counter:LPM_COUNTER_component|cntr_5ei:auto_generated|counter_reg_bit[0] ; led_controller:b2v_inst6|led_out ; 0.158             ;
++------------------------------------------------------------------------------------------------------+----------------------------------+-------------------+
 Note: This table only shows the top 15 path(s) that have the largest delay added for hold.
 
 
@@ -1102,16 +1103,16 @@ Info (176353): Automatically promoted node clk~input (placed in PIN 23 (CLK1, DI
 Info (176353): Automatically promoted node enable~input (placed in PIN 68 (DIFFIO_B20n, DQS0B/CQ1B,DPCLK3))
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G9
     Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
-        Info (176357): Destination node Controlador_e:inst|rt
-        Info (176357): Destination node Controlador_e:inst|en_count
-        Info (176357): Destination node Controlador_e:inst|Selector1~0
-        Info (176357): Destination node Controlador_e:inst|Selector1~2
-        Info (176357): Destination node Controlador_e:inst|Selector5~0
-        Info (176357): Destination node Controlador_e:inst|process_0~0
-        Info (176357): Destination node Controlador_e:inst|en_count~0
-        Info (176357): Destination node Controlador_e:inst|state_controller~12
-        Info (176357): Destination node Controlador_e:inst|load
-        Info (176357): Destination node Controlador_e:inst|Selector4~4
+        Info (176357): Destination node Controlador_e:b2v_inst|rt
+        Info (176357): Destination node Controlador_e:b2v_inst|en_count
+        Info (176357): Destination node Controlador_e:b2v_inst|Selector1~0
+        Info (176357): Destination node Controlador_e:b2v_inst|Selector1~2
+        Info (176357): Destination node Controlador_e:b2v_inst|Selector5~0
+        Info (176357): Destination node Controlador_e:b2v_inst|process_0~0
+        Info (176357): Destination node Controlador_e:b2v_inst|en_count~0
+        Info (176357): Destination node Controlador_e:b2v_inst|state_controller~12
+        Info (176357): Destination node Controlador_e:b2v_inst|load
+        Info (176357): Destination node Controlador_e:b2v_inst|Selector4~4
         Info (176358): Non-global destination nodes limited to 10 nodes
 Info (176233): Starting register packing
 Info (176235): Finished register packing
@@ -1129,35 +1130,35 @@ Info (176215): I/O bank details before I/O pin placement
         Info (176213): I/O bank number 6 does not use VREF pins and has undetermined VCCIO pins. 1 total pin(s) used --  9 pins available
         Info (176213): I/O bank number 7 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  13 pins available
         Info (176213): I/O bank number 8 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  12 pins available
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:01
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:02
 Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
 Info (170191): Fitter placement operations beginning
 Info (170137): Fitter placement was successful
-Info (170192): Fitter placement operations ending: elapsed time is 00:00:00
+Info (170192): Fitter placement operations ending: elapsed time is 00:00:01
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
     Info (170196): Router estimated peak interconnect usage is 0% of the available device resources in the region that extends from location X23_Y0 to location X34_Y11
-Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
+Info (170194): Fitter routing operations ending: elapsed time is 00:00:02
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (11888): Total time spent on timing analysis during the Fitter is 0.17 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.89 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
-Info (144001): Generated suppressed messages file C:/Users/Admin/Desktop/motor/output_files/motor.fit.smsg
-Info: Quartus II 64-Bit Fitter was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 4936 megabytes
-    Info: Processing ended: Sun May 19 17:00:01 2019
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:07
+Info (144001): Generated suppressed messages file Z:/Users/caiotelles/Google Drive/Universidade/Eletrônica Digital II/Motor_doc/Motor_labDigital_II/Motor/output_files/motor.fit.smsg
+Info: Quartus II 32-bit Fitter was successful. 0 errors, 6 warnings
+    Info: Peak virtual memory: 0 megabytes
+    Info: Processing ended: Mon May 27 16:33:42 2019
+    Info: Elapsed time: 00:00:18
+    Info: Total CPU time (on all processors): 00:00:13
 
 
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in C:/Users/Admin/Desktop/motor/output_files/motor.fit.smsg.
+The suppressed messages can be found in Z:/Users/caiotelles/Google Drive/Universidade/Eletrônica Digital II/Motor_doc/Motor_labDigital_II/Motor/output_files/motor.fit.smsg.
 
 

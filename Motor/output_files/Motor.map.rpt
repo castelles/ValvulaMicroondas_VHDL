@@ -1,6 +1,6 @@
 Analysis & Synthesis report for motor
-Sun May 19 16:59:53 2019
-Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+Mon May 27 16:33:14 2019
+Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
 ---------------------
@@ -14,13 +14,13 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis IP Cores Summary
-  9. State Machine - |motor|Controlador_e:inst|state_controller
+  9. State Machine - |motor|Controlador_e:b2v_inst|state_controller
  10. User-Specified and Inferred Latches
  11. Registers Removed During Synthesis
  12. General Register Statistics
  13. Multiplexer Restructuring Statistics (Restructuring Performed)
- 14. Parameter Settings for User Entity Instance: lpm_mux0:inst9|LPM_MUX:LPM_MUX_component
- 15. Parameter Settings for User Entity Instance: lpm_counter0:inst10|lpm_counter:LPM_COUNTER_component
+ 14. Parameter Settings for User Entity Instance: lpm_counter0:b2v_inst10|lpm_counter:LPM_COUNTER_component
+ 15. Parameter Settings for User Entity Instance: lpm_mux0:b2v_inst9|LPM_MUX:LPM_MUX_component
  16. Elapsed Time Per Partition
  17. Analysis & Synthesis Messages
 
@@ -48,8 +48,8 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun May 19 16:59:52 2019           ;
-; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Analysis & Synthesis Status        ; Successful - Mon May 27 16:33:14 2019           ;
+; Quartus II 32-bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; motor                                           ;
 ; Top-level Entity Name              ; motor                                           ;
 ; Family                             ; Cyclone IV E                                    ;
@@ -163,36 +163,36 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                        ;
-+----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                              ; Library ;
-+----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------+---------+
-; led_controller.vhd               ; yes             ; User VHDL File                     ; C:/Users/Admin/Desktop/motor/led_controller.vhd                           ;         ;
-; dsf_shiftregister.vhd            ; yes             ; User VHDL File                     ; C:/Users/Admin/Desktop/motor/dsf_shiftregister.vhd                        ;         ;
-; demux_rotation.vhd               ; yes             ; User VHDL File                     ; C:/Users/Admin/Desktop/motor/demux_rotation.vhd                           ;         ;
-; Controlador_e.vhd                ; yes             ; User VHDL File                     ; C:/Users/Admin/Desktop/motor/Controlador_e.vhd                            ;         ;
-; Comparador_e.vhd                 ; yes             ; User VHDL File                     ; C:/Users/Admin/Desktop/motor/Comparador_e.vhd                             ;         ;
-; lpm_mux0.vhd                     ; yes             ; User Wizard-Generated File         ; C:/Users/Admin/Desktop/motor/lpm_mux0.vhd                                 ;         ;
-; lpm_counter0.vhd                 ; yes             ; User Wizard-Generated File         ; C:/Users/Admin/Desktop/motor/lpm_counter0.vhd                             ;         ;
-; motor.bdf                        ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Admin/Desktop/motor/motor.bdf                                    ;         ;
-; lpm_mux.tdf                      ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_mux.tdf             ;         ;
-; aglobal130.inc                   ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/aglobal130.inc          ;         ;
-; muxlut.inc                       ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/muxlut.inc              ;         ;
-; bypassff.inc                     ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/bypassff.inc            ;         ;
-; altshift.inc                     ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altshift.inc            ;         ;
-; db/mux_p7e.tdf                   ; yes             ; Auto-Generated Megafunction        ; C:/Users/Admin/Desktop/motor/db/mux_p7e.tdf                               ;         ;
-; lpm_counter.tdf                  ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_counter.tdf         ;         ;
-; lpm_constant.inc                 ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_constant.inc        ;         ;
-; lpm_decode.inc                   ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_decode.inc          ;         ;
-; lpm_add_sub.inc                  ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_add_sub.inc         ;         ;
-; cmpconst.inc                     ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/cmpconst.inc            ;         ;
-; lpm_compare.inc                  ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_compare.inc         ;         ;
-; lpm_counter.inc                  ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_counter.inc         ;         ;
-; dffeea.inc                       ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/dffeea.inc              ;         ;
-; alt_counter_stratix.inc          ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/alt_counter_stratix.inc ;         ;
-; db/cntr_5ei.tdf                  ; yes             ; Auto-Generated Megafunction        ; C:/Users/Admin/Desktop/motor/db/cntr_5ei.tdf                              ;         ;
-+----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                      ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                                                  ; Library ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------------------------------------------+---------+
+; motor.vhd                        ; yes             ; User VHDL File               ; Z:/Users/caiotelles/Google Drive/Universidade/Eletrônica Digital II/Motor_doc/Motor_labDigital_II/Motor/motor.vhd             ;         ;
+; led_controller.vhd               ; yes             ; User VHDL File               ; Z:/Users/caiotelles/Google Drive/Universidade/Eletrônica Digital II/Motor_doc/Motor_labDigital_II/Motor/led_controller.vhd    ;         ;
+; dsf_shiftregister.vhd            ; yes             ; User VHDL File               ; Z:/Users/caiotelles/Google Drive/Universidade/Eletrônica Digital II/Motor_doc/Motor_labDigital_II/Motor/dsf_shiftregister.vhd ;         ;
+; demux_rotation.vhd               ; yes             ; User VHDL File               ; Z:/Users/caiotelles/Google Drive/Universidade/Eletrônica Digital II/Motor_doc/Motor_labDigital_II/Motor/demux_rotation.vhd    ;         ;
+; Controlador_e.vhd                ; yes             ; User VHDL File               ; Z:/Users/caiotelles/Google Drive/Universidade/Eletrônica Digital II/Motor_doc/Motor_labDigital_II/Motor/Controlador_e.vhd     ;         ;
+; Comparador_e.vhd                 ; yes             ; User VHDL File               ; Z:/Users/caiotelles/Google Drive/Universidade/Eletrônica Digital II/Motor_doc/Motor_labDigital_II/Motor/Comparador_e.vhd      ;         ;
+; lpm_mux0.vhd                     ; yes             ; User Wizard-Generated File   ; Z:/Users/caiotelles/Google Drive/Universidade/Eletrônica Digital II/Motor_doc/Motor_labDigital_II/Motor/lpm_mux0.vhd          ;         ;
+; lpm_counter0.vhd                 ; yes             ; User Wizard-Generated File   ; Z:/Users/caiotelles/Google Drive/Universidade/Eletrônica Digital II/Motor_doc/Motor_labDigital_II/Motor/lpm_counter0.vhd      ;         ;
+; lpm_counter.tdf                  ; yes             ; Megafunction                 ; z:/users/caiotelles/desktop/13.0sp1/quartus/libraries/megafunctions/lpm_counter.tdf                                           ;         ;
+; lpm_constant.inc                 ; yes             ; Megafunction                 ; z:/users/caiotelles/desktop/13.0sp1/quartus/libraries/megafunctions/lpm_constant.inc                                          ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                 ; z:/users/caiotelles/desktop/13.0sp1/quartus/libraries/megafunctions/lpm_decode.inc                                            ;         ;
+; lpm_add_sub.inc                  ; yes             ; Megafunction                 ; z:/users/caiotelles/desktop/13.0sp1/quartus/libraries/megafunctions/lpm_add_sub.inc                                           ;         ;
+; cmpconst.inc                     ; yes             ; Megafunction                 ; z:/users/caiotelles/desktop/13.0sp1/quartus/libraries/megafunctions/cmpconst.inc                                              ;         ;
+; lpm_compare.inc                  ; yes             ; Megafunction                 ; z:/users/caiotelles/desktop/13.0sp1/quartus/libraries/megafunctions/lpm_compare.inc                                           ;         ;
+; lpm_counter.inc                  ; yes             ; Megafunction                 ; z:/users/caiotelles/desktop/13.0sp1/quartus/libraries/megafunctions/lpm_counter.inc                                           ;         ;
+; dffeea.inc                       ; yes             ; Megafunction                 ; z:/users/caiotelles/desktop/13.0sp1/quartus/libraries/megafunctions/dffeea.inc                                                ;         ;
+; alt_counter_stratix.inc          ; yes             ; Megafunction                 ; z:/users/caiotelles/desktop/13.0sp1/quartus/libraries/megafunctions/alt_counter_stratix.inc                                   ;         ;
+; aglobal130.inc                   ; yes             ; Megafunction                 ; z:/users/caiotelles/desktop/13.0sp1/quartus/libraries/megafunctions/aglobal130.inc                                            ;         ;
+; db/cntr_5ei.tdf                  ; yes             ; Auto-Generated Megafunction  ; Z:/Users/caiotelles/Google Drive/Universidade/Eletrônica Digital II/Motor_doc/Motor_labDigital_II/Motor/db/cntr_5ei.tdf       ;         ;
+; lpm_mux.tdf                      ; yes             ; Megafunction                 ; z:/users/caiotelles/desktop/13.0sp1/quartus/libraries/megafunctions/lpm_mux.tdf                                               ;         ;
+; muxlut.inc                       ; yes             ; Megafunction                 ; z:/users/caiotelles/desktop/13.0sp1/quartus/libraries/megafunctions/muxlut.inc                                                ;         ;
+; bypassff.inc                     ; yes             ; Megafunction                 ; z:/users/caiotelles/desktop/13.0sp1/quartus/libraries/megafunctions/bypassff.inc                                              ;         ;
+; altshift.inc                     ; yes             ; Megafunction                 ; z:/users/caiotelles/desktop/13.0sp1/quartus/libraries/megafunctions/altshift.inc                                              ;         ;
+; db/mux_p7e.tdf                   ; yes             ; Auto-Generated Megafunction  ; Z:/Users/caiotelles/Google Drive/Universidade/Eletrônica Digital II/Motor_doc/Motor_labDigital_II/Motor/db/mux_p7e.tdf        ;         ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------+
@@ -225,40 +225,40 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-----------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                         ;
-+-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------+--------------+
-; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                  ; Library Name ;
-+-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------+--------------+
-; |motor                                    ; 51 (0)            ; 29 (0)       ; 0           ; 0            ; 0       ; 0         ; 19   ; 0            ; |motor                                                                               ; work         ;
-;    |Comparador_e:inst4|                   ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |motor|Comparador_e:inst4                                                            ; work         ;
-;    |Controlador_e:inst|                   ; 28 (28)           ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |motor|Controlador_e:inst                                                            ; work         ;
-;    |demux_rotation:inst3|                 ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |motor|demux_rotation:inst3                                                          ; work         ;
-;    |dsf_shiftregister:inst2|              ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |motor|dsf_shiftregister:inst2                                                       ; work         ;
-;    |led_controller:inst5|                 ; 3 (3)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |motor|led_controller:inst5                                                          ; work         ;
-;    |led_controller:inst6|                 ; 0 (0)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |motor|led_controller:inst6                                                          ; work         ;
-;    |led_controller:inst7|                 ; 3 (3)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |motor|led_controller:inst7                                                          ; work         ;
-;    |led_controller:inst8|                 ; 0 (0)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |motor|led_controller:inst8                                                          ; work         ;
-;    |lpm_counter0:inst10|                  ; 8 (0)             ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |motor|lpm_counter0:inst10                                                           ; work         ;
-;       |lpm_counter:LPM_COUNTER_component| ; 8 (0)             ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |motor|lpm_counter0:inst10|lpm_counter:LPM_COUNTER_component                         ; work         ;
-;          |cntr_5ei:auto_generated|        ; 8 (8)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |motor|lpm_counter0:inst10|lpm_counter:LPM_COUNTER_component|cntr_5ei:auto_generated ; work         ;
-+-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                             ;
++-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                      ; Library Name ;
++-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------+--------------+
+; |motor                                    ; 51 (0)            ; 29 (0)       ; 0           ; 0            ; 0       ; 0         ; 19   ; 0            ; |motor                                                                                   ; work         ;
+;    |Comparador_e:b2v_inst4|               ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |motor|Comparador_e:b2v_inst4                                                            ; work         ;
+;    |Controlador_e:b2v_inst|               ; 28 (28)           ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |motor|Controlador_e:b2v_inst                                                            ; work         ;
+;    |demux_rotation:b2v_inst3|             ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |motor|demux_rotation:b2v_inst3                                                          ; work         ;
+;    |dsf_shiftregister:b2v_inst2|          ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |motor|dsf_shiftregister:b2v_inst2                                                       ; work         ;
+;    |led_controller:b2v_inst5|             ; 3 (3)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |motor|led_controller:b2v_inst5                                                          ; work         ;
+;    |led_controller:b2v_inst6|             ; 0 (0)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |motor|led_controller:b2v_inst6                                                          ; work         ;
+;    |led_controller:b2v_inst7|             ; 3 (3)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |motor|led_controller:b2v_inst7                                                          ; work         ;
+;    |led_controller:b2v_inst8|             ; 0 (0)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |motor|led_controller:b2v_inst8                                                          ; work         ;
+;    |lpm_counter0:b2v_inst10|              ; 8 (0)             ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |motor|lpm_counter0:b2v_inst10                                                           ; work         ;
+;       |lpm_counter:LPM_COUNTER_component| ; 8 (0)             ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |motor|lpm_counter0:b2v_inst10|lpm_counter:LPM_COUNTER_component                         ; work         ;
+;          |cntr_5ei:auto_generated|        ; 8 (8)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |motor|lpm_counter0:b2v_inst10|lpm_counter:LPM_COUNTER_component|cntr_5ei:auto_generated ; work         ;
++-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis IP Cores Summary                                                                                                      ;
-+--------+--------------+---------+--------------+--------------+----------------------------+-----------------------------------------------+
-; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance            ; IP Include File                               ;
-+--------+--------------+---------+--------------+--------------+----------------------------+-----------------------------------------------+
-; Altera ; LPM_MUX      ; 13.0    ; N/A          ; N/A          ; |motor|lpm_mux0:inst9      ; C:/Users/Admin/Desktop/motor/lpm_mux0.vhd     ;
-; Altera ; LPM_COUNTER  ; 13.0    ; N/A          ; N/A          ; |motor|lpm_counter0:inst10 ; C:/Users/Admin/Desktop/motor/lpm_counter0.vhd ;
-+--------+--------------+---------+--------------+--------------+----------------------------+-----------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                                                                                                                                                     ;
++--------+--------------+---------+--------------+--------------+--------------------------------+--------------------------------------------------------------------------------------------------------------------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                ; IP Include File                                                                                                          ;
++--------+--------------+---------+--------------+--------------+--------------------------------+--------------------------------------------------------------------------------------------------------------------------+
+; Altera ; LPM_MUX      ; 13.0    ; N/A          ; N/A          ; |motor|lpm_mux0:b2v_inst9      ; Z:/Users/caiotelles/Google Drive/Universidade/Eletrônica Digital II/Motor_doc/Motor_labDigital_II/Motor/lpm_mux0.vhd     ;
+; Altera ; LPM_COUNTER  ; 13.0    ; N/A          ; N/A          ; |motor|lpm_counter0:b2v_inst10 ; Z:/Users/caiotelles/Google Drive/Universidade/Eletrônica Digital II/Motor_doc/Motor_labDigital_II/Motor/lpm_counter0.vhd ;
++--------+--------------+---------+--------------+--------------+--------------------------------+--------------------------------------------------------------------------------------------------------------------------+
 
 
 Encoding Type:  One-Hot
 +-----------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |motor|Controlador_e:inst|state_controller                                                                                    ;
+; State Machine - |motor|Controlador_e:b2v_inst|state_controller                                                                                ;
 +-------------------------------+-------------------------------+----------------------------+-----------------------+--------------------------+
 ; Name                          ; state_controller.power_engine ; state_controller.set_speed ; state_controller.hold ; state_controller.standby ;
 +-------------------------------+-------------------------------+----------------------------+-----------------------+--------------------------+
@@ -269,27 +269,27 @@ Encoding Type:  One-Hot
 +-------------------------------+-------------------------------+----------------------------+-----------------------+--------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                                       ;
-+----------------------------------------------------+-----------------------------+------------------------+
-; Latch Name                                         ; Latch Enable Signal         ; Free of Timing Hazards ;
-+----------------------------------------------------+-----------------------------+------------------------+
-; Comparador_e:inst4|ls                              ; Controlador_e:inst|en_count ; yes                    ;
-; Number of user-specified and inferred latches = 1  ;                             ;                        ;
-+----------------------------------------------------+-----------------------------+------------------------+
++---------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                           ;
++----------------------------------------------------+---------------------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal             ; Free of Timing Hazards ;
++----------------------------------------------------+---------------------------------+------------------------+
+; Comparador_e:b2v_inst4|ls                          ; Controlador_e:b2v_inst|en_count ; yes                    ;
+; Number of user-specified and inferred latches = 1  ;                                 ;                        ;
++----------------------------------------------------+---------------------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
-+---------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                      ;
-+-------------------------------------------------+-------------------------------------------------------+
-; Register name                                   ; Reason for Removal                                    ;
-+-------------------------------------------------+-------------------------------------------------------+
-; dsf_shiftregister:inst2|speed_register[1,2,5,6] ; Stuck at VCC due to stuck port data_in                ;
-; dsf_shiftregister:inst2|speed_register[3,4,7]   ; Merged with dsf_shiftregister:inst2|speed_register[0] ;
-; Controlador_e:inst|sp                           ; Merged with Controlador_e:inst|rt                     ;
-; Total Number of Removed Registers = 8           ;                                                       ;
-+-------------------------------------------------+-------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                              ;
++-----------------------------------------------------+-----------------------------------------------------------+
+; Register name                                       ; Reason for Removal                                        ;
++-----------------------------------------------------+-----------------------------------------------------------+
+; dsf_shiftregister:b2v_inst2|speed_register[1,2,5,6] ; Stuck at VCC due to stuck port data_in                    ;
+; dsf_shiftregister:b2v_inst2|speed_register[3,4,7]   ; Merged with dsf_shiftregister:b2v_inst2|speed_register[0] ;
+; Controlador_e:b2v_inst|sp                           ; Merged with Controlador_e:b2v_inst|rt                     ;
+; Total Number of Removed Registers = 8               ;                                                           ;
++-----------------------------------------------------+-----------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -307,59 +307,59 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                    ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output          ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
-; 12:1               ; 2 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |motor|Controlador_e:inst|Selector5 ;
-; 15:1               ; 2 bits    ; 20 LEs        ; 8 LEs                ; 12 LEs                 ; No         ; |motor|Controlador_e:inst|Selector6 ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------+
+; 12:1               ; 2 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |motor|Controlador_e:b2v_inst|Selector5 ;
+; 15:1               ; 2 bits    ; 20 LEs        ; 8 LEs                ; 12 LEs                 ; No         ; |motor|Controlador_e:b2v_inst|Selector6 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------+
 
 
-+---------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: lpm_mux0:inst9|LPM_MUX:LPM_MUX_component ;
-+------------------------+--------------+-----------------------------------------------+
-; Parameter Name         ; Value        ; Type                                          ;
-+------------------------+--------------+-----------------------------------------------+
-; AUTO_CARRY_CHAINS      ; ON           ; AUTO_CARRY                                    ;
-; IGNORE_CARRY_BUFFERS   ; OFF          ; IGNORE_CARRY                                  ;
-; AUTO_CASCADE_CHAINS    ; ON           ; AUTO_CASCADE                                  ;
-; IGNORE_CASCADE_BUFFERS ; OFF          ; IGNORE_CASCADE                                ;
-; LPM_WIDTH              ; 8            ; Signed Integer                                ;
-; LPM_SIZE               ; 2            ; Signed Integer                                ;
-; LPM_WIDTHS             ; 1            ; Signed Integer                                ;
-; LPM_PIPELINE           ; 0            ; Signed Integer                                ;
-; CBXI_PARAMETER         ; mux_p7e      ; Untyped                                       ;
-; DEVICE_FAMILY          ; Cyclone IV E ; Untyped                                       ;
-+------------------------+--------------+-----------------------------------------------+
++--------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: lpm_counter0:b2v_inst10|lpm_counter:LPM_COUNTER_component ;
++------------------------+--------------+----------------------------------------------------------------+
+; Parameter Name         ; Value        ; Type                                                           ;
++------------------------+--------------+----------------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON           ; AUTO_CARRY                                                     ;
+; IGNORE_CARRY_BUFFERS   ; OFF          ; IGNORE_CARRY                                                   ;
+; AUTO_CASCADE_CHAINS    ; ON           ; AUTO_CASCADE                                                   ;
+; IGNORE_CASCADE_BUFFERS ; OFF          ; IGNORE_CASCADE                                                 ;
+; LPM_WIDTH              ; 8            ; Signed Integer                                                 ;
+; LPM_DIRECTION          ; UP           ; Untyped                                                        ;
+; LPM_MODULUS            ; 0            ; Untyped                                                        ;
+; LPM_AVALUE             ; UNUSED       ; Untyped                                                        ;
+; LPM_SVALUE             ; UNUSED       ; Untyped                                                        ;
+; LPM_PORT_UPDOWN        ; PORT_UNUSED  ; Untyped                                                        ;
+; DEVICE_FAMILY          ; Cyclone IV E ; Untyped                                                        ;
+; CARRY_CHAIN            ; MANUAL       ; Untyped                                                        ;
+; CARRY_CHAIN_LENGTH     ; 48           ; CARRY_CHAIN_LENGTH                                             ;
+; NOT_GATE_PUSH_BACK     ; ON           ; NOT_GATE_PUSH_BACK                                             ;
+; CARRY_CNT_EN           ; SMART        ; Untyped                                                        ;
+; LABWIDE_SCLR           ; ON           ; Untyped                                                        ;
+; USE_NEW_VERSION        ; TRUE         ; Untyped                                                        ;
+; CBXI_PARAMETER         ; cntr_5ei     ; Untyped                                                        ;
++------------------------+--------------+----------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+----------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: lpm_counter0:inst10|lpm_counter:LPM_COUNTER_component ;
-+------------------------+--------------+------------------------------------------------------------+
-; Parameter Name         ; Value        ; Type                                                       ;
-+------------------------+--------------+------------------------------------------------------------+
-; AUTO_CARRY_CHAINS      ; ON           ; AUTO_CARRY                                                 ;
-; IGNORE_CARRY_BUFFERS   ; OFF          ; IGNORE_CARRY                                               ;
-; AUTO_CASCADE_CHAINS    ; ON           ; AUTO_CASCADE                                               ;
-; IGNORE_CASCADE_BUFFERS ; OFF          ; IGNORE_CASCADE                                             ;
-; LPM_WIDTH              ; 8            ; Signed Integer                                             ;
-; LPM_DIRECTION          ; UP           ; Untyped                                                    ;
-; LPM_MODULUS            ; 0            ; Untyped                                                    ;
-; LPM_AVALUE             ; UNUSED       ; Untyped                                                    ;
-; LPM_SVALUE             ; UNUSED       ; Untyped                                                    ;
-; LPM_PORT_UPDOWN        ; PORT_UNUSED  ; Untyped                                                    ;
-; DEVICE_FAMILY          ; Cyclone IV E ; Untyped                                                    ;
-; CARRY_CHAIN            ; MANUAL       ; Untyped                                                    ;
-; CARRY_CHAIN_LENGTH     ; 48           ; CARRY_CHAIN_LENGTH                                         ;
-; NOT_GATE_PUSH_BACK     ; ON           ; NOT_GATE_PUSH_BACK                                         ;
-; CARRY_CNT_EN           ; SMART        ; Untyped                                                    ;
-; LABWIDE_SCLR           ; ON           ; Untyped                                                    ;
-; USE_NEW_VERSION        ; TRUE         ; Untyped                                                    ;
-; CBXI_PARAMETER         ; cntr_5ei     ; Untyped                                                    ;
-+------------------------+--------------+------------------------------------------------------------+
++-------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: lpm_mux0:b2v_inst9|LPM_MUX:LPM_MUX_component ;
++------------------------+--------------+---------------------------------------------------+
+; Parameter Name         ; Value        ; Type                                              ;
++------------------------+--------------+---------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON           ; AUTO_CARRY                                        ;
+; IGNORE_CARRY_BUFFERS   ; OFF          ; IGNORE_CARRY                                      ;
+; AUTO_CASCADE_CHAINS    ; ON           ; AUTO_CASCADE                                      ;
+; IGNORE_CASCADE_BUFFERS ; OFF          ; IGNORE_CASCADE                                    ;
+; LPM_WIDTH              ; 8            ; Signed Integer                                    ;
+; LPM_SIZE               ; 2            ; Signed Integer                                    ;
+; LPM_WIDTHS             ; 1            ; Signed Integer                                    ;
+; LPM_PIPELINE           ; 0            ; Signed Integer                                    ;
+; CBXI_PARAMETER         ; mux_p7e      ; Untyped                                           ;
+; DEVICE_FAMILY          ; Cyclone IV E ; Untyped                                           ;
++------------------------+--------------+---------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -368,7 +368,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -376,11 +376,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
-Info: Running Quartus II 64-Bit Analysis & Synthesis
+Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Sun May 19 16:59:49 2019
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off motor -c motor
+    Info: Processing started: Mon May 27 16:33:06 2019
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Motor -c motor
 Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 2 design units, including 1 entities, in source file motor.vhd
+    Info (12022): Found design unit 1: motor-bdf_type
+    Info (12023): Found entity 1: motor
 Info (12021): Found 2 design units, including 1 entities, in source file one_delay.vhd
     Info (12022): Found design unit 1: One_delay-onedelay_arc
     Info (12023): Found entity 1: One_delay
@@ -405,48 +408,25 @@ Info (12021): Found 2 design units, including 1 entities, in source file lpm_mux
 Info (12021): Found 2 design units, including 1 entities, in source file lpm_counter0.vhd
     Info (12022): Found design unit 1: lpm_counter0-SYN
     Info (12023): Found entity 1: lpm_counter0
-Info (12021): Found 1 design units, including 1 entities, in source file motor.bdf
-    Info (12023): Found entity 1: motor
+Info (12021): Found 1 design units, including 1 entities, in source file motorv2.bdf
+    Info (12023): Found entity 1: motorv2
 Info (12127): Elaborating entity "motor" for the top level hierarchy
-Info (12128): Elaborating entity "led_controller" for hierarchy "led_controller:inst5"
-Info (12128): Elaborating entity "Controlador_e" for hierarchy "Controlador_e:inst"
+Info (12128): Elaborating entity "Controlador_e" for hierarchy "Controlador_e:b2v_inst"
 Warning (10540): VHDL Signal Declaration warning at Controlador_e.vhd(14): used explicit default value for signal "speed_low" because signal was never assigned a value
 Warning (10540): VHDL Signal Declaration warning at Controlador_e.vhd(15): used explicit default value for signal "speed_high" because signal was never assigned a value
-Info (12128): Elaborating entity "Comparador_e" for hierarchy "Comparador_e:inst4"
-Warning (10492): VHDL Process Statement warning at Comparador_e.vhd(22): signal "a" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at Comparador_e.vhd(22): signal "b" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at Comparador_e.vhd(25): signal "a" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at Comparador_e.vhd(25): signal "b" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10631): VHDL Process Statement warning at Comparador_e.vhd(17): inferring latch(es) for signal or variable "led_ls", which holds its previous value in one or more paths through the process
-Warning (10631): VHDL Process Statement warning at Comparador_e.vhd(17): inferring latch(es) for signal or variable "ls", which holds its previous value in one or more paths through the process
-Info (10041): Inferred latch for "ls" at Comparador_e.vhd(17)
-Info (10041): Inferred latch for "led_ls" at Comparador_e.vhd(17)
-Info (12128): Elaborating entity "dsf_shiftregister" for hierarchy "dsf_shiftregister:inst2"
-Info (12128): Elaborating entity "lpm_mux0" for hierarchy "lpm_mux0:inst9"
-Info (12128): Elaborating entity "LPM_MUX" for hierarchy "lpm_mux0:inst9|LPM_MUX:LPM_MUX_component"
-Info (12130): Elaborated megafunction instantiation "lpm_mux0:inst9|LPM_MUX:LPM_MUX_component"
-Info (12133): Instantiated megafunction "lpm_mux0:inst9|LPM_MUX:LPM_MUX_component" with the following parameter:
-    Info (12134): Parameter "LPM_WIDTH" = "8"
-    Info (12134): Parameter "LPM_SIZE" = "2"
-    Info (12134): Parameter "LPM_WIDTHS" = "1"
-    Info (12134): Parameter "LPM_PIPELINE" = "0"
-    Info (12134): Parameter "LPM_TYPE" = "LPM_MUX"
-    Info (12134): Parameter "LPM_HINT" = "UNUSED"
-Info (12021): Found 1 design units, including 1 entities, in source file db/mux_p7e.tdf
-    Info (12023): Found entity 1: mux_p7e
-Info (12128): Elaborating entity "mux_p7e" for hierarchy "lpm_mux0:inst9|LPM_MUX:LPM_MUX_component|mux_p7e:auto_generated"
-Info (12128): Elaborating entity "lpm_counter0" for hierarchy "lpm_counter0:inst10"
-Info (12128): Elaborating entity "lpm_counter" for hierarchy "lpm_counter0:inst10|lpm_counter:LPM_COUNTER_component"
-Info (12130): Elaborated megafunction instantiation "lpm_counter0:inst10|lpm_counter:LPM_COUNTER_component"
-Info (12133): Instantiated megafunction "lpm_counter0:inst10|lpm_counter:LPM_COUNTER_component" with the following parameter:
+Info (12128): Elaborating entity "lpm_counter0" for hierarchy "lpm_counter0:b2v_inst10"
+Info (12128): Elaborating entity "lpm_counter" for hierarchy "lpm_counter0:b2v_inst10|lpm_counter:LPM_COUNTER_component"
+Info (12130): Elaborated megafunction instantiation "lpm_counter0:b2v_inst10|lpm_counter:LPM_COUNTER_component"
+Info (12133): Instantiated megafunction "lpm_counter0:b2v_inst10|lpm_counter:LPM_COUNTER_component" with the following parameter:
     Info (12134): Parameter "lpm_direction" = "UP"
     Info (12134): Parameter "lpm_port_updown" = "PORT_UNUSED"
     Info (12134): Parameter "lpm_type" = "LPM_COUNTER"
     Info (12134): Parameter "lpm_width" = "8"
 Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_5ei.tdf
     Info (12023): Found entity 1: cntr_5ei
-Info (12128): Elaborating entity "cntr_5ei" for hierarchy "lpm_counter0:inst10|lpm_counter:LPM_COUNTER_component|cntr_5ei:auto_generated"
-Info (12128): Elaborating entity "demux_rotation" for hierarchy "demux_rotation:inst3"
+Info (12128): Elaborating entity "cntr_5ei" for hierarchy "lpm_counter0:b2v_inst10|lpm_counter:LPM_COUNTER_component|cntr_5ei:auto_generated"
+Info (12128): Elaborating entity "dsf_shiftregister" for hierarchy "dsf_shiftregister:b2v_inst2"
+Info (12128): Elaborating entity "demux_rotation" for hierarchy "demux_rotation:b2v_inst3"
 Warning (10631): VHDL Process Statement warning at demux_rotation.vhd(17): inferring latch(es) for signal or variable "in0", which holds its previous value in one or more paths through the process
 Warning (10631): VHDL Process Statement warning at demux_rotation.vhd(17): inferring latch(es) for signal or variable "in1", which holds its previous value in one or more paths through the process
 Warning (10631): VHDL Process Statement warning at demux_rotation.vhd(17): inferring latch(es) for signal or variable "led_in0", which holds its previous value in one or more paths through the process
@@ -455,6 +435,29 @@ Info (10041): Inferred latch for "led_in1" at demux_rotation.vhd(17)
 Info (10041): Inferred latch for "led_in0" at demux_rotation.vhd(17)
 Info (10041): Inferred latch for "in1" at demux_rotation.vhd(17)
 Info (10041): Inferred latch for "in0" at demux_rotation.vhd(17)
+Info (12128): Elaborating entity "Comparador_e" for hierarchy "Comparador_e:b2v_inst4"
+Warning (10492): VHDL Process Statement warning at Comparador_e.vhd(22): signal "a" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at Comparador_e.vhd(22): signal "b" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at Comparador_e.vhd(25): signal "a" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at Comparador_e.vhd(25): signal "b" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at Comparador_e.vhd(17): inferring latch(es) for signal or variable "led_ls", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at Comparador_e.vhd(17): inferring latch(es) for signal or variable "ls", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "ls" at Comparador_e.vhd(17)
+Info (10041): Inferred latch for "led_ls" at Comparador_e.vhd(17)
+Info (12128): Elaborating entity "led_controller" for hierarchy "led_controller:b2v_inst5"
+Info (12128): Elaborating entity "lpm_mux0" for hierarchy "lpm_mux0:b2v_inst9"
+Info (12128): Elaborating entity "LPM_MUX" for hierarchy "lpm_mux0:b2v_inst9|LPM_MUX:LPM_MUX_component"
+Info (12130): Elaborated megafunction instantiation "lpm_mux0:b2v_inst9|LPM_MUX:LPM_MUX_component"
+Info (12133): Instantiated megafunction "lpm_mux0:b2v_inst9|LPM_MUX:LPM_MUX_component" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTH" = "8"
+    Info (12134): Parameter "LPM_SIZE" = "2"
+    Info (12134): Parameter "LPM_WIDTHS" = "1"
+    Info (12134): Parameter "LPM_PIPELINE" = "0"
+    Info (12134): Parameter "LPM_TYPE" = "LPM_MUX"
+    Info (12134): Parameter "LPM_HINT" = "UNUSED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/mux_p7e.tdf
+    Info (12023): Found entity 1: mux_p7e
+Info (12128): Elaborating entity "mux_p7e" for hierarchy "lpm_mux0:b2v_inst9|LPM_MUX:LPM_MUX_component|mux_p7e:auto_generated"
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
@@ -462,10 +465,10 @@ Info (21057): Implemented 76 device resources after synthesis - the final resour
     Info (21058): Implemented 4 input pins
     Info (21059): Implemented 15 output pins
     Info (21061): Implemented 57 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 13 warnings
-    Info: Peak virtual memory: 4655 megabytes
-    Info: Processing ended: Sun May 19 16:59:53 2019
-    Info: Elapsed time: 00:00:04
-    Info: Total CPU time (on all processors): 00:00:03
+Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 13 warnings
+    Info: Peak virtual memory: 0 megabytes
+    Info: Processing ended: Mon May 27 16:33:14 2019
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:06
 
 

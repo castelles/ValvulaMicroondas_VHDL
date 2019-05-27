@@ -2,19 +2,19 @@
 TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Slow 1200mV 85C Model Setup 'Controlador_e:inst|en_count'
-Slack : -4.944
-TNS   : -4.944
+Type  : Slow 1200mV 85C Model Setup 'Controlador_e:b2v_inst|en_count'
+Slack : -4.940
+TNS   : -4.940
 
 Type  : Slow 1200mV 85C Model Setup 'clk'
-Slack : -2.347
-TNS   : -36.778
+Slack : -2.344
+TNS   : -35.554
 
 Type  : Slow 1200mV 85C Model Hold 'clk'
-Slack : -0.238
-TNS   : -0.238
+Slack : -0.360
+TNS   : -0.360
 
-Type  : Slow 1200mV 85C Model Hold 'Controlador_e:inst|en_count'
+Type  : Slow 1200mV 85C Model Hold 'Controlador_e:b2v_inst|en_count'
 Slack : 3.468
 TNS   : 0.000
 
@@ -22,23 +22,23 @@ Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
 Slack : -3.000
 TNS   : -46.123
 
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'Controlador_e:inst|en_count'
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'Controlador_e:b2v_inst|en_count'
 Slack : 0.471
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Setup 'Controlador_e:inst|en_count'
-Slack : -4.543
-TNS   : -4.543
+Type  : Slow 1200mV 0C Model Setup 'Controlador_e:b2v_inst|en_count'
+Slack : -4.540
+TNS   : -4.540
 
 Type  : Slow 1200mV 0C Model Setup 'clk'
-Slack : -2.126
-TNS   : -31.880
+Slack : -2.123
+TNS   : -30.713
 
 Type  : Slow 1200mV 0C Model Hold 'clk'
-Slack : -0.114
-TNS   : -0.114
+Slack : -0.235
+TNS   : -0.235
 
-Type  : Slow 1200mV 0C Model Hold 'Controlador_e:inst|en_count'
+Type  : Slow 1200mV 0C Model Hold 'Controlador_e:b2v_inst|en_count'
 Slack : 3.273
 TNS   : 0.000
 
@@ -46,23 +46,23 @@ Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
 Slack : -3.000
 TNS   : -46.123
 
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'Controlador_e:inst|en_count'
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'Controlador_e:b2v_inst|en_count'
 Slack : 0.476
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Setup 'Controlador_e:inst|en_count'
-Slack : -1.888
-TNS   : -1.888
+Type  : Fast 1200mV 0C Model Setup 'Controlador_e:b2v_inst|en_count'
+Slack : -1.886
+TNS   : -1.886
 
 Type  : Fast 1200mV 0C Model Setup 'clk'
-Slack : -0.430
-TNS   : -2.180
+Slack : -0.428
+TNS   : -1.828
 
 Type  : Fast 1200mV 0C Model Hold 'clk'
-Slack : -0.251
-TNS   : -1.293
+Slack : -0.308
+TNS   : -1.399
 
-Type  : Fast 1200mV 0C Model Hold 'Controlador_e:inst|en_count'
+Type  : Fast 1200mV 0C Model Hold 'Controlador_e:b2v_inst|en_count'
 Slack : 1.776
 TNS   : 0.000
 
@@ -70,7 +70,7 @@ Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
 Slack : -3.000
 TNS   : -33.874
 
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'Controlador_e:inst|en_count'
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'Controlador_e:b2v_inst|en_count'
 Slack : 0.447
 TNS   : 0.000
 
