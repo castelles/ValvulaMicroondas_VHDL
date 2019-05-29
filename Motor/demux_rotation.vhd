@@ -1,6 +1,10 @@
 library ieee;
 use ieee.std_logic_1164.all;
 
+--															MULTIPLEXADOR INVERTIDO QUE DEFINE O SENTIDO DO MOTOR
+--															in0 = 1 & in1 = 0 => SENTIDO HORARIO
+--															in0 = 0 & in1 = 1 => SENTIDO ANTI-HORARIO
+
 entity demux_rotation is
 	port(
 			selectRot	: in std_logic;

@@ -1,6 +1,9 @@
 library ieee;
 use ieee.std_logic_1164.all;
 
+-- ESSE BLOCO NÃO FOI UTILIZADO PQ NÃO HOUVE CONCORRENCIA ENTRE OS CLOCKS NA MINHA EMBARCAÇÃO
+-- TALVEZ TENHA QUE SER COLOCADO PQ COM A INTEGRAÇÃO VÃO HAVER MAIS SINAIS
+
 entity One_delay is
   port (
     d  : in  std_logic;
