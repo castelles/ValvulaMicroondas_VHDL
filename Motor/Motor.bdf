@@ -21,24 +21,6 @@ applicable agreement for further details.
 (header "graphic" (version "1.4"))
 (pin
 	(input)
-	(rect -136 288 -120 464)
-	(text "INPUT" (rect 0 15 10 43)(font "Arial" (font_size 6))(vertical))
-	(text "clk" (rect 0 153 12 167)(font "Arial" )(vertical))
-	(pt 8 0)
-	(drawing
-		(line (pt 12 84)(pt 12 59))
-		(line (pt 4 84)(pt 4 59))
-		(line (pt 8 55)(pt 8 0))
-		(line (pt 12 84)(pt 4 84))
-		(line (pt 4 59)(pt 8 55))
-		(line (pt 12 59)(pt 8 55))
-	)
-	(rotate90)
-	(text "VCC" (rect 7 20 17 40)(font "Arial" (font_size 6))(vertical))
-	(annotation_block (location)(rect -192 464 -136 480))
-)
-(pin
-	(input)
 	(rect -544 104 -368 120)
 	(text "INPUT" (rect 133 0 161 10)(font "Arial" (font_size 6)))
 	(text "start_keyboard" (rect 5 0 78 12)(font "Arial" ))
@@ -116,6 +98,40 @@ applicable agreement for further details.
 		(line (pt 117 12)(pt 121 8))
 	)
 	(text "VCC" (rect 136 7 156 17)(font "Arial" (font_size 6)))
+)
+(pin
+	(input)
+	(rect -160 288 -144 482)
+	(text "INPUT" (rect 0 15 10 43)(font "Arial" (font_size 6))(vertical))
+	(text "clk_ctrl" (rect 2 151 14 186)(font "Arial" )(vertical))
+	(pt 8 0)
+	(drawing
+		(line (pt 12 84)(pt 12 59))
+		(line (pt 4 84)(pt 4 59))
+		(line (pt 8 55)(pt 8 0))
+		(line (pt 12 84)(pt 4 84))
+		(line (pt 4 59)(pt 8 55))
+		(line (pt 12 59)(pt 8 55))
+	)
+	(rotate90)
+	(text "VCC" (rect 7 20 17 40)(font "Arial" (font_size 6))(vertical))
+	(annotation_block (location)(rect -192 464 -136 480))
+)
+(pin
+	(input)
+	(rect 224 448 392 464)
+	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
+	(text "clk_30KHz" (rect 5 0 59 12)(font "Arial" ))
+	(pt 168 8)
+	(drawing
+		(line (pt 84 12)(pt 109 12))
+		(line (pt 84 4)(pt 109 4))
+		(line (pt 113 8)(pt 168 8))
+		(line (pt 84 12)(pt 84 4))
+		(line (pt 109 4)(pt 113 8))
+		(line (pt 109 12)(pt 113 8))
+	)
+	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
 )
 (pin
 	(output)
@@ -641,10 +657,6 @@ applicable agreement for further details.
 	(pt 96 192)
 )
 (connector
-	(pt 56 456)
-	(pt 488 456)
-)
-(connector
 	(pt 288 176)
 	(pt 320 176)
 )
@@ -679,10 +691,6 @@ applicable agreement for further details.
 (connector
 	(pt 416 320)
 	(pt 416 336)
-)
-(connector
-	(pt 56 360)
-	(pt 56 456)
 )
 (connector
 	(pt 56 360)
@@ -842,22 +850,6 @@ applicable agreement for further details.
 	(pt -224 224)
 )
 (connector
-	(pt -128 256)
-	(pt 56 256)
-)
-(connector
-	(pt 56 192)
-	(pt 56 256)
-)
-(connector
-	(pt 56 256)
-	(pt 56 360)
-)
-(connector
-	(pt -128 256)
-	(pt -128 288)
-)
-(connector
 	(pt 960 256)
 	(pt 984 256)
 )
@@ -969,7 +961,26 @@ applicable agreement for further details.
 	(pt 1048 56)
 	(pt 1120 56)
 )
-(junction (pt 56 360))
+(connector
+	(pt 56 256)
+	(pt -152 256)
+)
+(connector
+	(pt -152 256)
+	(pt -152 288)
+)
+(connector
+	(pt 56 192)
+	(pt 56 256)
+)
+(connector
+	(pt 56 256)
+	(pt 56 360)
+)
+(connector
+	(pt 392 456)
+	(pt 488 456)
+)
 (junction (pt 792 192))
 (junction (pt 776 224))
 (junction (pt 504 224))

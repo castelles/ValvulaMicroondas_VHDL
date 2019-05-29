@@ -14,7 +14,7 @@
 
 -- PROGRAM		"Quartus II 32-bit"
 -- VERSION		"Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition"
--- CREATED		"Wed May 29 15:37:13 2019"
+-- CREATED		"Wed May 29 16:24:36 2019"
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.all; 
@@ -24,15 +24,16 @@ LIBRARY work;
 ENTITY motor IS 
 	PORT
 	(
-		clk :  IN  STD_LOGIC;
 		start_keyboard :  IN  STD_LOGIC;
 		start_btt :  IN  STD_LOGIC;
 		key_set :  IN  STD_LOGIC;
 		cancel_btt :  IN  STD_LOGIC;
 		cancel_keyboard :  IN  STD_LOGIC;
+		clk_ctrl :  IN  STD_LOGIC;
+		clk_30KHz :  IN  STD_LOGIC;
 		duty_cycle :  OUT  STD_LOGIC;
-		in0 :  OUT  STD_LOGIC;
-		in1 :  OUT  STD_LOGIC
+		in1 :  OUT  STD_LOGIC;
+		in0 :  OUT  STD_LOGIC
 	);
 END motor;
 
@@ -140,7 +141,7 @@ BEGIN
 
 b2v_inst : controlador_e
 PORT MAP(en4 => SYNTHESIZED_WIRE_0,
-		 clk => clk,
+		 clk => clk_ctrl,
 		 remote => SYNTHESIZED_WIRE_1,
 		 local => key_set,
 		 sp => SYNTHESIZED_WIRE_13,
@@ -152,7 +153,7 @@ PORT MAP(en4 => SYNTHESIZED_WIRE_0,
 
 
 b2v_inst10 : lpm_counter0
-PORT MAP(clock => clk,
+PORT MAP(clock => clk_30KHz,
 		 cnt_en => SYNTHESIZED_WIRE_16,
 		 q => SYNTHESIZED_WIRE_12);
 
@@ -183,7 +184,7 @@ PORT MAP(in0 => SYNTHESIZED_WIRE_3,
 
 b2v_inst2 : dsf_shiftregister
 PORT MAP(load => SYNTHESIZED_WIRE_5,
-		 clk => clk,
+		 clk => clk_ctrl,
 		 data => SYNTHESIZED_WIRE_6,
 		 speed_register => SYNTHESIZED_WIRE_11);
 
