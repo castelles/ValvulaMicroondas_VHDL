@@ -27,9 +27,9 @@ begin
 			if en4 = '0' then
 				state_controller <= standby;
 				led_enable <= '0';
-			elsif rising_edge(clk) then
+			elsif rising_edge(clk) then    -- MUDAR PARA BORDA DE DESCIDA
 				
-				case state_controller is
+				case state_controller is   
 					
 					when standby => if en4 = '1' and  remote = '0' and local = '0' then
 											sp <= '0';
