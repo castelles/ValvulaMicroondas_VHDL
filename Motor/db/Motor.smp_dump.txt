@@ -1,0 +1,7 @@
+
+State Machine - |motor|Controlador_e:b2v_inst|state_controller
+Name state_controller.power_engine state_controller.set_speed state_controller.hold state_controller.standby 
+state_controller.standby 0 0 0 0 
+state_controller.hold 0 0 1 1 
+state_controller.set_speed 0 1 0 1 
+state_controller.power_engine 1 0 0 1 

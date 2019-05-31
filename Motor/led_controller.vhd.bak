@@ -1,0 +1,27 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity led_controller is
+	port (
+			control   : in BIT;
+			led_out   : out BIT;
+			led_out2  : out BIT;
+			led_out3  : out BIT
+	);
+end led_controller;
+
+architecture controller of led_controller is
+begin
+	process(control)
+	begin
+		if control = '0' then
+			led_out <= '1';
+			led_out2 <= '1';
+			led_out3 <= '1';
+		else
+			led_out <= '0';
+			led_out2 <= '0';
+			led_out3 <= '0';
+		end if;
+	end process;
+end controller;

@@ -1,0 +1,25 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity dsf_shiftregister is
+	port(
+			load 				 : in BIT;
+			data 				 : in std_logic_vector(7 downto 0);
+			clk  				 : in std_logic;
+			speed_register  : buffer std_logic_vector(7 downto 0)
+	);
+end dsf_shiftregister;
+
+architecture load_register of dsf_shiftregister is
+begin
+	process(clk)
+	begin
+		if rising_edge(clk) then
+			if load = '1' then
+				speed_register <= data;
+			else
+				speed_register <= speed_register;
+			end if;
+		end if;
+	end process;
+end load_register;
